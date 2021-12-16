@@ -37,7 +37,6 @@ nav ul{
 }
 
 nav ul li{
-    margin-left: 10px;
     list-style: none;
     position: relative;
 }
@@ -121,6 +120,12 @@ nav ul li a:hover{
     margin: 10px auto;
     letter-spacing: 0.15rem;
     animation: typing 10s steps(30,end), blink-caret 0.5s step-end infinite;
+}
+
+#button{
+    width: 100px;
+    height: 100px;
+    background: pink;
 }
 
 @keyframes typing {
