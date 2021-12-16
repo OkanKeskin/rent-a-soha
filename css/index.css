@@ -43,7 +43,7 @@ nav ul li{
     display: none;
     position: absolute;
     border: 1px solid black;
-    background-color: grey;
+    background-color:rgb(247, 247, 243);
     flex-direction: column;
     padding: 15px;
 }
