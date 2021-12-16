@@ -75,6 +75,7 @@ nav ul li a{
 nav ul li a:hover{
     border-bottom: 1px solid black;
     color: #02b8dd;
+    transition: 0.5s;
 }
 
 .login{
@@ -93,6 +94,7 @@ nav ul li a:hover{
 
 .login a:hover{
     color: #02b8dd;
+    transition: 0.5s;
 }
 
 .header-bottom{
@@ -192,10 +194,12 @@ nav ul li a:hover{
 
 .footer-top a:hover{
     color: #02b8dd;
+    transition: 0.5s;
 }
 
 .footer-top a:hover svg{
     color: #02b8dd;
+    transition: 0.5s;
 }
 
 .adress a{
