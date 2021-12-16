@@ -39,6 +39,7 @@ nav ul{
 nav ul li{
     list-style: none;
     position: relative;
+    margin-top: 17px;
 }
 
 .acilir{
@@ -67,7 +68,7 @@ nav ul li:hover .acilir{
 }
 
 nav ul li a{
-    padding: 25px;
+    padding: 20px;
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -81,14 +82,14 @@ nav ul li a:hover{
 
 .login{
     flex: 1;
-    margin-bottom: 15px;
-    margin-left: 310px;
+    margin-bottom: 0px;
+    margin-left: 450px;
 }
 
 .login a{
     padding: 25px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     color: #000000;
     font-weight: bold;
 }
@@ -126,6 +127,7 @@ nav ul li a:hover{
     width: 100px;
     height: 100px;
     background: pink;
+    border: none;
 }
 
 @keyframes typing {
