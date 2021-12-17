@@ -1,0 +1,235 @@
+
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.logo{
+    width: 150px;
+}
+
+.logo img{
+    margin-bottom: 10px;
+}
+
+nav{
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    position: relative;
+    margin-top: 17px;
+}
+
+.acilir{
+    display: none;
+    position: absolute;
+    border: 1px solid black;
+    background-color:rgb(247, 247, 243);
+    flex-direction: column;
+    padding: 15px;
+    z-index: 1;
+}
+
+.acilir li{
+    margin: 0 auto;
+}
+
+.acilir li a{
+    padding: 5px;
+}
+
+.acilir li a:hover{
+    border: none;
+}
+
+nav ul li:hover .acilir{
+    display: block;
+}
+
+nav ul li a{
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    border-bottom: 1px solid black;
+    color: #02b8dd;
+    transition: 0.5s;
+}
+
+.login{
+    flex: 1;
+    margin-bottom: 0px;
+    margin-left: 450px;
+}
+
+.login a{
+    padding: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.login a:hover{
+    color: #02b8dd;
+    transition: 0.5s;
+}
+
+/*ARAÇLAR KISMI BAŞLANGIÇ*/
+
+.button{
+    float: right;
+}
+
+.araclar_satir_ayrimi{
+    margin: 0px 0px 0px 40px;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+.card-img-top{
+    width: 420px;
+    height: 210px;
+
+}
+.card-header{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: fit-content;
+    
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+.card-header .arac_sinif{
+    color:black;
+    line-height: 40px;
+}
+.card-header .arac_isim{
+    color: red;
+}
+
+
+
+.arac_bolumu_kartli_yapi{
+    padding: 16px;
+    border: 1px solid #E1DED9;
+    margin: 20px;
+    box-shadow: 0px 5px 5px 0px grey;
+    border-radius: 0px 25px 25px 25px;
+
+}
+.arac_bolumu_kartli_yapi:hover{
+    background-color: grey;
+}
+
+
+
+
+
+.resim_alti_bilgi{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-list{
+    list-style-type: none;
+    padding: 0px;
+}
+/*ARAÇLAR KISMI BİTİŞ*/
+
+/* FOOTER */
+.footer-top{
+    background: rgb(247, 247, 243);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer-top img{
+    margin: 0 auto;
+}
+
+.footer-nav{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-nav h6{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-nav ul{
+    list-style: none;
+    margin-right: 40px;
+}
+
+.footer-nav ul li{
+    margin-bottom: 8px;
+}
+
+.footer-nav ul li a{
+    text-decoration: none;
+    color: grey;
+    font-size: 13px;
+}
+
+.footer-top .adress{
+    display: flex;
+}
+
+.footer-top a:hover{
+    color: #02b8dd;
+    transition: 0.5s;
+}
+
+.footer-top a:hover svg{
+    color: #02b8dd;
+    transition: 0.5s;
+}
+
+.adress a{
+    color: #000000;
+    margin: 10px auto;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    background: rgb(233, 233, 228);
+}
+
+.copy-text{
+    text-align: left;
+    padding: 20px;
+    color: grey;
+}
+
+/* FOOTER */
