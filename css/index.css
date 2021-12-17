@@ -122,11 +122,58 @@ nav ul li a:hover{
     animation: typing 10s steps(30,end), blink-caret 0.5s step-end infinite;
 }
 
+/* CONTENT */
+
+.content{
+    width: 50%;
+    margin: 15px auto;
+    display: flex;
+    background-image: url("/assets/logo.jpeg");
+}
+
 #button{
     width: 100px;
     height: 100px;
     background: pink;
+    margin: 200px auto;
     border: none;
+}
+
+#section{
+    width: 100%;
+    height: 100%;
+}
+
+.rezerve{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 200px auto;
+
+}
+
+.rezerve h3{
+    text-align: center;
+}
+
+.rezerve .select{
+    border: none;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100px;
+}
+
+.rezerve .select option{
+    text-align: center;
+}
+
+.rezerve input{
+    margin-left: 20px;
+    border: 1px solid red;
+    background-color: white;
+
 }
 
 @keyframes typing {
