@@ -93,15 +93,30 @@ nav ul li a:hover{
     transition: 0.5s;
 }
 
-@media  screen and( max-width:800px) {
-    .biz_kimiz{
-        float: left;
-    }
-    
+.card-body{
+    display: flex;
+    flex-direction: column;
 }
 
 
+.card-header{
+    font-family: 'Times New Roman', Times, serif;
+    height: fit-content;
+    text-align: center;
+    height: 50px;
+}
 
+.card-img-bottom{
+    display: flex;
+    justify-content: center;
+}
+
+.img{
+    display: inline-block;
+    width: 200px;
+    height: 210px;
+    margin-left: 10px;
+}
 
 
 
