@@ -225,6 +225,7 @@ nav ul li a:hover{
 .why-work{
     width: 100%;
     height: 100vh;
+    margin-bottom: 10px;
     background-color: rgb(247, 247, 243);
 }
 
