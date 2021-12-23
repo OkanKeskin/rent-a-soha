@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/panel.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".baslik").hover(function(){
+                $(this).css("font-size", "500%")
+            })
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <!-- <img style="border-radius: 30px;" src="../assets/logo2.png" alt=""> -->
+        <h1 class="baslik">Admin Panel</h1>
+        <h5 style="margin-right: 10px;">Hoş Geldin Admin_adı</h5>
+    </header>
+    <div class="panel-container">
+        <div class="selections">
+            <ul>
+                <li><a href="arac-ekle.html">Araç Ekle</a></li>
+                <li><a href="">Araç Güncelle</a></li>
+                <li><a href="">Üye İşlemleri</a></li>
+            </ul>
+            <a class="cikis" href="../index.html">Çıkış Yap</a>
+        </div>
+        <div class="content"></div>
+    </div>
+
+
+
+
+
+
+    <script src="../js/panel.js"></script>
+</body>
+</html>
