@@ -1,0 +1,24 @@
+body{
+    background: radial-gradient(circle, pink,violet,rgb(2,184,221));
+}
+
+.header1{
+    margin: 20px;
+    text-align: center;
+    border-bottom: black 1px solid;
+}
+
+div.header1 h1{
+    font-size: 35px;
+}
+
+div.header1 p{
+    font-size: 12;
+}
+
+
+
+.container h4{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
