@@ -1,24 +1,67 @@
-body{
-    background: radial-gradient(circle, pink,violet,rgb(2,184,221));
-}
-
-.header1{
-    margin: 20px;
+div.header1{
+    margin-top: 20px;
     text-align: center;
-    border-bottom: black 1px solid;
+    border-bottom: black solid 1px;
 }
 
 div.header1 h1{
     font-size: 35px;
 }
-
 div.header1 p{
     font-size: 12;
 }
 
+label{
+    font-size: 16px;
+    font-style:oblique;
+}
 
-
-.container h4{
-    font-size: 18px;
+.KayitForm h4{
+    font-weight: bold;
+    font-size: 31px;
     margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.KayitForm input {
+    margin-bottom: 10px;
+}
+
+.KayitForm{
+    margin: 50px;
+}
+.KayitForm label{
+    margin: 3px 0;
+}
+
+.KayitForm div1{
+    width: 35%;
+    float: left;
+}
+.KayitForm div2{
+    width: 65%;
+    float: left;
+}
+
+@media screen and (max-width: 1000px) {
+    .KayitForm div1{
+        width: 50%;
+    }
+    .KayitForm div2{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .KayitForm {
+        justify-content: center;
+        text-align: center;
+    }
+    .KayitForm div1{
+        width: 100%;
+    }
+    .KayitForm div2{
+        width: 100%;
+    }
+
 }

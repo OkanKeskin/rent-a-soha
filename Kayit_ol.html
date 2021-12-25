@@ -13,6 +13,7 @@
       href="css/bootstrap-5.1.3-dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="css/Kayit.css">
+    <script src="js/kayit.js"></script>
   </head>
   <body>
     <div class="container">
@@ -68,7 +69,7 @@
                 fill-rule="evenodd"
                 d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
               />
-            </svg>
+            </svg>  
             <span>/</span>
             <a style="padding: 2px" href="">Üye Ol</a>
           </div>
@@ -83,13 +84,61 @@
             <h1>Rent-a-Soha Kayit İşlemleri</h1>
             <p>Rent-a-Soha Kayit İşlemleri</p>
         </div>
-        <div class="container,sorular">
-            <h4>Kayit İşlemleri</h4>
-            <form>
-              <h5>Adınız(ehliyetinizde yer aldığı gibi)</h5>
-              <input type="text">
-              <h5>Soyadınız</h5>
-              <input type="text">
+
+        
+
+        <div class="KayitForm">
+
+            <h4>Kayıt İşlemleri</h4>
+            
+
+
+            <form onsubmit="return pass()" method="post">
+              
+
+              <div1>
+                <label for="ad">Adınız (ehliyetinizde yer aldığı gibi)</label><br>
+              <input required id="ad" type="text" autofocus> 
+              </div1>
+
+              
+              <div2>
+                <label for="sAd">Soyadınız (ehliyetinizde yer aldığı gibi)</label><br>
+              <input required id="sAd" type="text"> 
+              </div2>
+              
+              
+              <div1>
+              <label for="TC">T.C. No yada Pasaport No</label><br>
+              <input required id="TC" type="number"> <br>
+             </div1>
+
+              <div2>
+              <label for="date">Doğum Tarihi</label><br>
+              <input required id="date" type="date"> <br>
+             </div2>
+
+              <div1>
+              <label for="CepTel">Cep Telefonu</label><br>
+              <input required id="CepTel" type="text" pattern="^05[0-9]{9}$" minlength="11" maxlength="11" value="05"> <br>
+             </div1>
+             
+              <div2>
+              <label for="email">E-Posta</label><br>
+              <input required id="email" type="email"> <br>
+             </div2>
+
+              <div1>
+              <label for="password">Şifre</label><br>
+              <input required id="password" type="password" autocomplete="off" minlength="7" maxlength="23"> <br>
+             </div1>
+
+              <div2>
+              <label for="passwordT">Şifre Tekrar</label><br>
+              <input required id="passwordT" type="password" autocomplete="off" minlength="7" maxlength="23"> <br>
+             </div2>
+
+              <button type="submit" class="btn btn-primary">Gönder</button>
                 
             </form>
         </div>
