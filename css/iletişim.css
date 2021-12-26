@@ -1,0 +1,73 @@
+div.İletişim_header{
+    margin-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: black solid 1px;
+    width: 100%;
+}
+
+div.İletişim_header h1{
+    font-size: 38px;
+}
+
+.headyazi p{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.container p.smal{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.container label{
+    font-weight: bold;
+    font-size: 14px;
+    margin: 3px 0;
+    font-family: "Arial";
+}
+
+.container input{
+    width: 90%;
+    height: 40px;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #231f20;
+    background-color: none;
+    outline: none;
+    font-family: "Arial";
+    margin-bottom: 20px;
+}
+.container input:hover{
+    border: 1px solid black;
+}
+
+.container div1{
+    width: 50%;
+    float: left;
+}
+.container div2{
+    width: 50%;
+    float: left;
+}
+
+.container .mesaj input{
+    width: 95%;
+    height: 100px;
+}
+
+
+@media screen and (max-width: 545px) {
+    .container div1{
+        width: 100%;
+    }
+    .container div2{
+        width: 100%;
+    }
+    .container .mesaj input{
+        width: 90%;
+        height: 100px;
+    }
+
+}
