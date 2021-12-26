@@ -43,6 +43,7 @@ nav ul li{
     background-color:rgb(247, 247, 243);
     flex-direction: column;
     padding: 15px;
+    z-index: 1;
 }
 
 .acilir li{
