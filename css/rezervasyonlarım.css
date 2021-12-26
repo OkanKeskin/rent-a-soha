@@ -100,7 +100,7 @@ nav ul li a:hover{
 .rezervasyonlarım_bolumu{
     margin-top: 8cm;
     margin-left: 3cm;
-   
+    display: flexbox;
     align-items: center;
     font-family: 'Mukta', sans-serif;
 }
@@ -114,16 +114,18 @@ nav ul li a:hover{
     left: 0;
     height: 400px;
     background-color: #02b8dd;
+    
 }
 .beyaz_bolum{
     background-color: rgba(255,255, 255, 1);
     height: 500px;
     position: absolute;
-    top: -50px;
+    top: -70px;
     width: 50%;
     right: calc(50% - 50px);
     z-index: 0;
     box-shadow: 0 0 15px 9px #00000096;
+    border-radius: 25px 25px 25px 25px;
     
 }
 .rezervasyon_resim{
@@ -156,8 +158,116 @@ text-align: left;
 box-sizing: border-box;
 margin-right: 30px;
 }
+.buton_sonrasi2{
+    display: none;
+    
+}
+.soldaki_yazi_bolumu{
+    width: 60%;
+    color: white;
+    font-size: 12px;
+top: 10%;
+left: 5%;
+position: absolute;
+ text-align: center;
+box-sizing: border-box;
+text-align: start;
+
+}
+#table{
+    width: 300px;
+    text-align: left;
+    
+}
+
+/* ARAÇ KISMI*/
+.button1{
+    float: right;
+}
+.button2{
+    float: left;
+}
+
+.card-img-top{
+    width: 420px;
+    height: 210px;
+
+}
+.card-header{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: fit-content;
+    
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+.card-header .arac_sinif{
+    color:black;
+    line-height: 30px;
+}
+.card-header .arac_isim{
+    color: #02b8dd;
+}
 
 
+
+.arac_bolumu_kartli_yapi{
+    display: none;
+    padding: 14px;
+    border: 1px solid #E1DED9;
+    margin: 19px;
+    box-shadow: 0px 5px 5px 0px grey;
+    border-radius: 0px 25px 25px 25px;
+    
+
+}
+.arac_bolumu_kartli_yapi:hover{
+    background-color: darkcyan;
+    transition: 0.7s;
+}
+
+
+.resim_alti_bilgi{
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+}
+
+.icon-list{
+    list-style-type: none;
+    padding: 0px;
+}
+/* ARAÇ KISMI*/
+
+/*Güncelleme KISMI BAŞLANGIÇ */
+.guncelleme{
+    display: none;
+    height: 100%;
+
+}
+.tablo{
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    margin-right:50px ;
+}
+.sagdaki_yazi_bolumu2{
+    width: 30%;
+    color: white;
+    font-size: 20px;
+top: 20%;
+right: 0;
+position: absolute;
+text-align: left;
+box-sizing: border-box;
+margin-right: 70px;
+display: none;
+}
+.butonlar{
+    justify-content: space-between;
+}
+
+/*Güncelleme KISMI BİTİŞ */
 
 /*REZERVASYONLARIM BİTİŞ*/
 /* FOOTER */

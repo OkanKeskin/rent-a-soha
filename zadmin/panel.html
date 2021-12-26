@@ -9,8 +9,22 @@
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
-            $(".baslik").hover(function(){
-                $(this).css("font-size", "500%")
+            var side = $("#side");
+            var sidebar = $("#sidebar");
+            var cross = $("#cross");
+            sidebar.hide();
+            cross.hide();
+            side.click(function(){
+                sidebar.slideToggle("slow",function(){
+                    side.hide();
+                    cross.show();
+                })
+            })
+            cross.click(function(){
+                sidebar.slideToggle("slow",function(){
+                    cross.hide();
+                    side.show();
+                })
             })
         })
     </script>
@@ -22,15 +36,27 @@
         <h5 style="margin-right: 10px;">Hoş Geldin Admin_adı</h5>
     </header>
     <div class="panel-container">
-        <div class="selections">
+        <div class="selections" id="sidebar">
             <ul>
                 <li><a href="arac-ekle.html">Araç Ekle</a></li>
-                <li><a href="">Araç Güncelle</a></li>
-                <li><a href="">Üye İşlemleri</a></li>
+                <li><a href="arac-guncelle.html">Araç Güncelle/Sil</a></li>
+                <li><a href="uye-islemleri.html">Üye İşlemleri</a></li>
             </ul>
             <a class="cikis" href="../index.html">Çıkış Yap</a>
         </div>
-        <div class="content"></div>
+        <div class="button" id="side">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+        </div>
+        <div class="cross" id="cross">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="color: #000000;" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+        </div>
+        <div class="content">
+
+        </div>
     </div>
 
 
