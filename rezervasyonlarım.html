@@ -7,10 +7,13 @@
     <title>Document</title>
     <link rel="shortcut icon" type="image/png" href="assets/logo.png" />
     <link rel="stylesheet" href="css/rezervasyonlarım.css" />
-    <link
-      rel="stylesheet"
-      href="css/bootstrap-5.1.3-dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
   </head>
   <body>
     <div class="container">
@@ -30,9 +33,9 @@
             <li>
               <a href="">Rezervasyon</a>
               <ul class="acilir">
-                <li><a href="">sds</a></li>
-                <li><a href="">sds</a></li>
-                <li><a href="">sds</a></li>
+                <li><a href="rezervasyonlarım.html">Rezervasyonlarım</a></li>
+                <li><a href="rezerve_olustur.html">Rezerve Oluştur</a></li>
+                
               </ul>
             </li>
             <li>
@@ -79,44 +82,288 @@
       </header>
       <!-- HEADER -->
     </div>
+    
 
-    <div class="rezervasyonlarım_bolumu">
+
+    
+  <!-- Rezervasyon Bölümü Başlangıç -->  <div class="rezervasyonlarım_bolumu">
       
-
-        <div class="kirmizi_bolum">
-            <div class="sagdaki_yazi_bolumu">
+  <!-- mavi Bölümü Başlangıç --><div class="kirmizi_bolum" id="kirmizi_bolum">
+        
+          
+         <!-- Sağdaki Yazı Bölümü Başlangıç -->   <div class="sagdaki_yazi_bolumu" id="sagdaki_yazi_bolumu">
                 
                 <p>Rezervasyonlarınıza rezervsayon numarası ve soyadınızı girerek iptal edebilir veya güncelleyebilirsiniz.</p>
+                <div style="margin-top: 40px;">
+                  <p style="color: rgb(255, 0, 0);" id="yazi_yok"></p>
+                </div>
+            </div><!-- Sağdaki Yazı Bölümü bitiş -->
+
+            <!-- Sağdaki Yazı Bölümü 2 Başlangıç -->   <div class="sagdaki_yazi_bolumu2" id="sagdaki_yazi_bolumu2">
+                
+              <p>Aracınızı değiştirmek istiyorsanız lütfen giriş yapın.</p>
+              <button type="button" id="guncelleme_arac" class="btn btn-outline-success" >Giriş Yap</button>
+              <div style="margin-top: 40px;">
+              <p style="color: rgb(43, 255, 0);" id="guncellendi"></p>
             </div>
-          <div class="beyaz_bolum">
-              <div class="rezervasyon_ara">
+            </div><!-- Sağdaki Yazı Bölümü 2 bitiş -->
+
+
+
+
+
+
+        <!-- Beyaz Bölüm Başlangıç -->  <div class="beyaz_bolum" id="beyaz_bolum">
+          <!-- Sağdaki Yazı Bölümü Başlangıç --><div class="buton_oncesi" id="buton_oncesi">
+              <div class="rezervasyon_ara" id="rezervasyon_ara">
                   <img class="rezervasyon_resim" src="assets/logo.png" alt="">
                 <form>
-                    <div class="rezervasyon_no">
+                    <div class="rezervasyon_no" id="rezervasyon_no">
                     <div class="mb-3">
                       <label for="rezervasyon" class="form-label">Rezervasyon Numarası</label>
                       <input type="text" class="form-control" id="rezervasyon_numara" >
+                      
                      
                     </div>
                 </div>
-                <div class="rezervasyon_soyad">
+                <div class="rezervasyon_soyad" id="rezervasyon_soyad">
                     <div class="mb-3">
                       <label for="rezervasyon" class="form-label">Soyadı</label>
                       <input type="text" class="form-control" id="rezervasyon_soyadi">
+                      
                     </div>
                 </div>
-                    <button style="float: right;" type="submit" class="btn btn-danger">Ara</button>
+                    <button id="ara" class="btn btn-outline-primary" type="button">Ara </button>
+                    <div id="hata1"></div>
+                    <div id="hata2" ></div>
                   </form>
             </div>
-          
-        </div>
+          </div>
+
+        <!-- EGEA BAŞLANGIÇ-->
+        <div class="arac_bolumu_kartli_yapi" id="arac_bolumu_kartli_yapi">
+
+
+
+
+          <div class="card">
+              <div class="card-header">
+                  <div class="arac_isim">
+                      <h3>Fiat Egea</h3>
+                  </div>
+                  <div class="arac_sinif">
+                      <p>Ekonomik Araç</p>
+                  </div>
+
+              </div>
+              <img class="card-img-top" src="assets/n-fiat-egea.png" alt="resim">
+              <div class="card-body">
+
+                  <div class="resim_alti_bilgi">
+                      <!--RESİM ALTI BİLGİLENDİRME BAŞLANGIÇ-->
+                      <!--ARAÇ ÖZELLİKLERİ BAŞLANGIÇ-->
+                      <div class="item">
+                          <b class="list-title">Araç Özellikleri</b>
+                          <ul class="icon-list">
+                              <li>
+                                  <i class="fa fa-users"></i>
+                                  <span> 5 Yetişkin</span>
+                              </li>
+                              <li>
+                                  <i class="fas fa-suitcase-rolling"></i>
+                                  <span> 2 Büyük Bavul</span>
+                              </li>
+                              <li>
+                                  <i class="fas fa-user-friends"></i>
+                                  <span>Yolcu Airbag</span>
+                              </li>
+                              <li>
+                                  <i class="fa fa-automobile"></i>
+                                  <span> ABS</span>
+                              </li>
+                              <li>
+                                  <i class="fa fa-car"></i>
+                                  <span>Dizel/Benzin</span>
+                              </li>
+                              <li>
+                                  <i class="fa fa-automobile"></i>
+                                  <span>Otomatik</span>
+                              </li>
+
+                          </ul>
+
+                      </div>
+                      <!--ARAÇ ÖZELLİKLERİ BİTİŞ-->
+
+                      <!--KİRALAMA KOŞULLARI BAŞLANGIÇ-->
+                      <div class="item">
+                          <b class="list-title">Kiralama Koşulları</b>
+                          <ul class="icon-list">
+                              <li>
+                                  <i class="fa fa-calendar"></i>
+                                  <span>21 Yaş ve Üstü</span>
+                              </li>
+                              <li>
+                                  <i class="fas fa-user-alt"> </i>
+                                  <span>Ehliyet Yaşı 1 ve Üzeri</span>
+                              </li>
+                              <li>
+                                  <i class="far fa-credit-card"></i>
+                                  <span>1 Kredi Kartı</span>
+                              </li>
+
+
+
+                          </ul>
+
+
+                      </div>
+                      <!--KİRALAMA KOŞULLARI BİTİŞ-->
+                  </div>
+                  <!--RESİM ALTI BİLGİLENDİRME BİTİŞ-->
+                  <div class="button1">
+                      <!--BUTON BAŞLANGIÇ-->
+
+                      <button id="guncelle" class="btn btn-primary">Güncelle</button>
+                  </div>
+                  <div class="button2">
+                  
+
+                    <button  id="iptal" class="btn btn-danger">İptal Et</button>
+                </div>
+                  <!--BUTON BİTİŞ-->
+              </div>
+          </div>
+
+
+
+
+
+
+
       </div>
-    </div>
+      <!-- EGEA BİTİŞ-->
+
+
+          <!-- Güncelleme butonu tıklanış sonrası-->
+          
+          <div class="guncelleme">
+            <br>
+            <span ><h2 style="color: white;">Sayithan Usta</h2></span>
+          
+            <div class="tablo">
+            <table  class="table table-inverse text-white ">
+              <tr>
+                <th><label for="my-select">Seçilen Araç</label></th>
+                <td >Fiat Egea</td>
+                <th><label for="my-select">Fiyat</label></th>
+                <td >600 TL</td>
+              </tr>
+              <tr>
+                <th><label for="my-select">Teslim Alma Ofisi</label></th>
+                <td ><select id="alis_ofisi" class="form-control" name="">
+                  <option>İstanbul Havalimanı</option>
+                  <option>Çorlu Havalimanı</option>
+                  <option>Kırklareli/Merkez</option>
+                  <option>Kırklareli/Lüleburgaz</option>
+              </select></td>
+              <th><label for="my-select">Teslim Etme Ofisi</label></th>
+                <td ><select id="iade_ofisi" class="form-control" name="">
+                  <option>İstanbul Havalimanı</option>
+                  <option>Çorlu Havalimanı</option>
+                  <option>Kırklareli/Merkez</option>
+                  <option>Kırklareli/Lüleburgaz</option>
+              </select></td>
+              
+              </tr>
+              
+              <tr>
+                <th>Teslim Alma Tarihi</th>
+                <td > <input type="date" class="form-control" name="lbs" value="2021-12-25" ></td>
+                <th>Teslim Etme Tarihi</th>
+                <td > <input type="date" class="form-control" name="lbs" value="2021-12-28" ></td>
+              </tr>
+              <tr>
+                <th>Teslim Alma Saati</th>
+                <td ><input type="time" class="form-control" id="time " value="12:00"></td>
+                <th>Teslim Etme Saati</th>
+                <td ><input type="time" class="form-control" id="time" value="19:00"></td>
+              </tr>
+              
+              <tr>
+                <th>Rezervasyon Oluşturma Tarihi</th>
+                <td > <input type="date" class="form-control" name="lbs" value="2021-12-25" ></td>
+                <th>Rezervasyon Güncelleme Tarihi</th>
+                <td > <input type="date" class="form-control" name="lbs" value="2021-12-25" ></td>
+              </tr>
+              
+               
+            </table>
+           
+          </div>
+          <div class="butonlar"> <!--BUTON BAŞLANGIÇ-->
+           
+            <button id="guncelleme" class="btn btn-outline-light">Güncelle</button>
+            <button  id="iptal_etme" class="btn btn-outline-danger">İptal Et</button>
+        </div> <!--BUTON bitiş-->
+        
+      </div>    <!-- Güncelleme butonu tıklanış sonrası bitiş-->
+
+      </div>
+
+
+<div class="buton_sonrasi2" id="buton_sonrasi2">
+  <div class="soldaki_yazi_bolumu" id="soldaki_yazi_bolumu">
+                
+    <h3 class="isim" id="isim">Sayithan Usta</h3>
+    <br>
+    <table id="table" class="table table-striped table-hover">
+      <tr>
+        <th>Rezervasyon Numarası</th>
+        <td id="rez_numara">1234567</td>
+      </tr>
+      <tr>
+        <th>Teslim Alım tarihi</th>
+        <td>25/12/2021</td>
+      </tr>
+      <tr>
+        <th>İade tarihi</th>
+        <td>28/12/2021</td>
+      </tr>
+      <tr>
+        <th>Güncelleme tarihi</th>
+        <td>25/12/2021</td>
+      </tr>
+      <tr>
+        <th>Fiyat</th>
+        <td>600TL</td>
+      </tr>
+    </table>
+</div>
+</div>
+</div>
+    </div>  <!-- mavi Bölümü bitiş -->
+    </div><!-- Rezervasyon Bölümü bitiş -->
+
+
+
+
+    
+
+
+    
+    
+    
 
     <!-- FOOTER -->
+
     <div class="footer-top">
+
       <img src="assets/logo2.png" height="100" width="230" alt="" srcset="" />
+
+
       <div class="footer-nav">
+
         <ul>
           <h6>Rent a SOHA</h6>
           <li><a href="biz_kimiz.html">Biz Kimiz</a></li>
@@ -202,5 +449,113 @@
     <script src="css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/index.js"></script>
+    <script>
+
+
+    $(document).ready(function(){
+
+      $("#ara").click(function(){
+
+  
+          var value = $("#rezervasyon_soyadi").val();
+
+          var numara = $("#rezervasyon_numara").val();
+
+          var num = $("#rez_numara").val();
+
+          $("#sagdaki_yazi_bolumu").hide();
+
+          $("#rezervasyon_ara").hide();
+
+           $("#beyaz_bolum").animate({left: "+=400",height:"+=85",width:"+=100"}, 2000);
+
+          $("#arac_bolumu_kartli_yapi").fadeIn(2000);
+
+           $("#buton_sonrasi2").fadeIn(3800);
+
+
+
+    
+         /* if(value == "Keskin"){
+            $("#isim").html("Okan" + value);
+          }
+         
+          else if(value == "Usta"){
+
+            $("#isim").html("Sayithan"+ value);
+
+          }
+          else if(value == "Şimşek"){
+
+            $("#isim").html("Halil Şafak" + value);
+          }
+          else{
+          
+            $("#yazi_yok").html("Böyle Bir Rezervasyon Bulunamadı!");
+          }
+*/
+
+      });
+
+     
+      $("#iptal").click( function(){
+
+
+        let text;
+if (confirm("Rezervasyonunuzu iptal etmek istediğinizden emin misiniz ?") == true) {
+  text = alert("Rezervasyonunuz Başarıyla İptal Edildi!");
+  document.location.href = 'index.html';
+} 
+
+
+      } );
+
+      $("#guncelle").click( function(){
+        
+        $("#beyaz_bolum").animate({left: "-=500"}, 2000);
+
+$("#arac_bolumu_kartli_yapi").hide();
+
+ $("#buton_sonrasi2").hide();
+
+ $(".guncelleme").fadeIn(2000);
+ $("#beyaz_bolum").css("background-color","black")
+ $("#sagdaki_yazi_bolumu2").fadeIn(2000);
+} );
+
+
+$("#guncelleme").click( function(){
+        
+  let text;
+if (confirm("Rezervasyonunuzu güncelleme yapmak istediğinizden emin misiniz ?") == true) {
+  $("#guncellendi").text("Başarıyla Güncellendi!")
+  
+} });
+
+$("#iptal_etme").click( function(){
+
+
+let text;
+if (confirm("Rezervasyonunuzu iptal etmek istediğinizden emin misiniz ?") == true) {
+text = alert("Rezervasyonunuz Başarıyla İptal Edildi!");
+document.location.href = 'index.html';
+} 
+
+
+
+} );
+
+
+
+
+  
+    } );
+  
+  
+    
+  
+  
+  </script>
   </body>
+
 </html>
