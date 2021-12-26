@@ -1,0 +1,38 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-variant: tabular-nums;
+}
+
+h1{
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: 800;
+    color: #18264E;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: #18264E;
+}
+
+h4{
+    font-size: 16px;
+    font-weight: 600;
+    color: #18264E;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+strong{
+    font-weight: bolder;
+}
+
+ul{
+    margin-top: 0;
+    margin-bottom: 1em;
+    list-style-type: disc;
+}
