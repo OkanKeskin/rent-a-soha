@@ -84,9 +84,12 @@
 
 
    
-    <div class="rezerve_yap" >
-      <div class="tablo">
-      <table  class="table table-responsive table-dark  table-hover">
+    <div class="rezerve_yap" id="rezerve_yap" >
+      <div class="container"  style="background-image: url(assets/kis_temasi2.jpeg);">
+        <div class="tablo_ayar" id="tablo">
+          <div class="card" style="background-color:  #928f93;;">
+            <div class="card-body">
+      <table  class="table table-inverse text-white  ">
         <tr>
           <header>
           <th><label for="my-select">Araç Sınfı Seç</label></th>
@@ -100,6 +103,7 @@
         </select></td>
           
         </tr>
+        
       </header>
         <tr>
           <th><label for="my-select">Teslim Alma Ofisi</label></th>
@@ -109,6 +113,8 @@
             <option>Kırklareli/Merkez</option>
             <option>Kırklareli/Lüleburgaz</option>
         </select></td>
+        </tr>
+        <tr>
         <th><label for="my-select">Teslim Etme Ofisi</label></th>
           <td ><select id="iade_ofisi" class="form-control" name="">
             <option>İstanbul Havalimanı</option>
@@ -122,58 +128,44 @@
         <tr>
           <th>Teslim Alma Tarihi</th>
           <td > <input type="date" class="form-control" name="lbs" value="2021-12-25" ></td>
+          </tr>
+          <tr>
           <th>Teslim Etme Tarihi</th>
           <td > <input type="date" class="form-control" name="lbs" value="2021-12-28" ></td>
         </tr>
         <tr>
           <th>Teslim Alma Saati</th>
           <td ><input type="time" class="form-control" id="time " value="12:00"></td>
+          </tr>
+          <tr>
           <th>Teslim Etme Saati</th>
           <td ><input type="time" class="form-control" id="time" value="19:00"></td>
         </tr>
         
-        <tr>
-          <th>Rezervasyon Oluşturma Tarihi</th>
-          <td > <input type="date" class="form-control" name="lbs" value="2021-12-25" ></td>
-          <th>Rezervasyon Güncelleme Tarihi</th>
-          <td > <input type="date" class="form-control" name="lbs" value="2021-12-25" ></td>
-        </tr>
+        
         
          
       </table>
      
     </div>
+    <div class="card-footer"> <!--kart-->
     <div class="butonlar"> <!--BUTON BAŞLANGIÇ-->
      
-      <button id="guncelleme" class="btn btn-outline-light">Güncelle</button>
-      <button  id="iptal_etme" class="btn btn-outline-danger">İptal Et</button>
+      <button id="yolla" class="btn btn-light" style="float: right; "  type="button"><a href="arac_sec.html" style=" text-decoration: none;" >Oluştur</a> </button>
+      
   </div> <!--BUTON bitiş-->
+</div><!--kartt-->
+</div>
+</div>
+  </div>
 </div>
 
-
-
-
-    
-<script>
-  
  
-function zaman_dilimi(){
-    var lbsVar=parseFloat(document.form-group.lbs.value)
-  var kgsVar=parseFloat(document.form-group.kgs.value)
-   
-    // Date fonksiyonu  aa/gg/yyyy formatında zamanı almaktadır.
-          
-            //iki tarih arasındaki saat farkını hesaplamak için aşağıdaki yöntemi kullanabiliriz.
-            var zamanFark = Math.abs(kgsVar.getTime - lbsVar.getTime());
-            
-            //zamanFark değişkeni ile elde edilen saati güne çevirmek için aşağıdaki yöntem kullanılabilir.
-            var gunFark = Math.ceil(zamanFark / (1000 * 3600 * 24)); 
-            
-            window.alert(gunFark);
-	}
 
-  
-</script>
+
+
+
+
 
 
 
@@ -271,7 +263,8 @@ function zaman_dilimi(){
     </footer>
 
     <!-- FOOTER -->
-
+    
+    
     <script src="css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/index.js"></script>

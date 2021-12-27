@@ -43,7 +43,6 @@ nav ul li{
     background-color:rgb(247, 247, 243);
     flex-direction: column;
     padding: 15px;
-    z-index: 1;
 }
 
 .acilir li{
@@ -94,21 +93,8 @@ nav ul li a:hover{
     color: #02b8dd;
     transition: 0.5s;
 }
-/*NAV BAR BİTİŞİ*/
 
-
-
-.tablo_ayar{
-    margin-left: 400px;
-    margin-right: 500px;
-    border-radius: 20px;
-    position: relative;
-    
-    
-}
-.tablo_ayar:hover{
-    box-shadow: 0 0 15px 9px #fdfdfd96;
-}
+/*ARAÇLAR KISMI BAŞLANGIÇ*/
 
 .button{
     float: right;
@@ -118,9 +104,7 @@ nav ul li a:hover{
     margin: 0px 0px 0px 40px;
     justify-content: space-between;
 }
-.tum_araclar{
-    display: none;
-}
+
 
 
 
@@ -174,8 +158,6 @@ nav ul li a:hover{
     padding: 0px;
 }
 /*ARAÇLAR KISMI BİTİŞ*/
-
-
 
 /* FOOTER */
 .footer-top{

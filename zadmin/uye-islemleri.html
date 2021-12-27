@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Üye İşlemleri</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/logo.ico"/>
     <link rel="stylesheet" href="../css/panel.css">
     <link rel="stylesheet" href="../css/uye-islemleri.css">
     <link rel="stylesheet" href="../css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
@@ -19,6 +20,7 @@
             var con = $(".con");
             var num = $(".num");
             var numG = $(".numG");
+            var kay = $("#kay");
 
             sidebar.hide();
             cross.hide();
@@ -55,7 +57,16 @@
                 })
             })
             
+            kay.click(function(){
+                var yeti =$("#yeti").find(":selected").text();
+                $("#yetii").text(yeti);
 
+                var ad = $("#adsoy").val();
+                $("#ads").text(ad);
+
+                var epos = $("#epos").val();
+                $("#epost").text(epos);
+            })
 
         })
     </script>
@@ -105,7 +116,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Ad Soyad</th>
                         <th scope="col">Kullanıcı Numarası</th>
-                        <th scope="col">Yetki Derecsi</th>
+                        <th scope="col">Yetki Derecesi</th>
                         <th scope="col">E-Posta</th>
                         <th scope="col">Güncelle</th>
                       </tr>
@@ -113,10 +124,10 @@
                     <tbody>
                       <tr>
                         <th scope="col" id="num" class="num">1</th>
-                        <th scope="col">Okan Keskin</th>
+                        <th scope="col" id="ads">Okan Keskin</th>
                         <th scope="col">123</th>
-                        <th scope="col">Admin</th>
-                        <th scope="col">okannkeskn@gmail.com</th>
+                        <th scope="col" id="yetii">Admin</th>
+                        <th scope="col" id="epost">okannkeskn@gmail.com</th>
                         <th scope="col">
                             <svg id="down" class="down" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -132,17 +143,17 @@
                                 <table class="table con" id="con">
                                       <tr>
                                           <th scope="col" id="numG" class="m-0 numG"></th>
-                                          <th scope="col"><input type="text" placeholder="Ad Soyad"></th>
-                                          <th scope="col">a</th>
+                                          <th scope="col"><input type="text" class="adsoy" id="adsoy" placeholder="Ad Soyad"></th>
+                                          <th scope="col">123</th>
                                           <th scope="col">
-                                              <select name="" id="">
-                                                  <option value="admin">Admin</option>
+                                              <select name="" id="yeti">
+                                                  <option selected value="admin">Admin</option>
                                                   <option value="uye">Üye</option>
                                               </select>
                                           </th>
-                                          <th scope="col"><input type="text"></th>
+                                          <th scope="col"><input type="text" class="adsoy" id="epos" placeholder="E-Posta"></th>
                                           <th scope="col">
-                                                <button class="btn btn-success">Kaydet</button>
+                                                <button class="btn btn-success" id="kay">Kaydet</button>
                                           </th>
                                       </tr>
                                 </table>
