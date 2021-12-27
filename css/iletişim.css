@@ -10,6 +10,10 @@ div.İletişim_header h1{
     font-size: 38px;
 }
 
+.headyazi{
+    width: 100%;
+}
+
 .headyazi p{
     font-size: 20px;
     margin-bottom: 50px;
@@ -43,6 +47,10 @@ div.İletişim_header h1{
     border: 1px solid black;
 }
 
+button{
+    background-color: #02b8dd;
+}
+
 .container div1{
     width: 50%;
     float: left;
@@ -57,8 +65,63 @@ div.İletişim_header h1{
     height: 100px;
 }
 
+.orta{
+    display: flex;
+}
 
-@media screen and (max-width: 545px) {
+.left{
+    width: 50%;
+}
+.right{
+    width: 48%;
+    height: 50%;
+    padding: 10px 20px;
+}
+
+.right_tel{
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    border: grey solid 1px;
+    padding: 20px;
+    display: inline-block;
+}
+.right_tel h4{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #18264E;
+    margin-bottom: 1px;
+}
+.right_tel p{
+    font-size: 14px;
+}
+.right_tel .musterihizmet{
+    width: 100%;
+}
+.right_tel .biziara{
+    width: 50%;
+}
+.right_tel .mailgonder{
+    width: 50%;
+}
+.right_tel .yeterartik{
+    display: flex;
+}
+
+.right_sosyal{
+    width: 100%;
+    height: 20%;
+    margin: 10px;
+    border: grey solid 1px;
+}
+
+.adress{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
     .container div1{
         width: 100%;
     }
@@ -68,6 +131,16 @@ div.İletişim_header h1{
     .container .mesaj input{
         width: 90%;
         height: 100px;
+    }
+
+}
+@media screen and (max-width: 990px) {
+    .right_tel{
+        height: 300px;
+    }
+    .yeterartik{
+        width: 100%;
+        display: inline-block;
     }
 
 }
