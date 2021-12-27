@@ -1,0 +1,45 @@
+.content{
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+content h1{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ust{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+    padding: 20px;
+}
+
+.searchs{
+    padding: 15px;
+}
+
+.searchs label{
+    font-size: 20px;
+}
+
+.searchs input{
+    border-radius: 20px;
+    width: 300px;
+    font-size: 20px;
+    height: 45px;
+    padding: 15px;
+    margin: 0 10px;
+}
+
+.filter{
+    padding: 15px;
+}
+
+.filter a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+}
