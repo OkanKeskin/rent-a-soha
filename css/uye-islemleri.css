@@ -43,3 +43,20 @@ content h1{
     font-size: 20px;
     padding: 15px;
 }
+
+.adsoy{
+    border: none;
+    outline: none ;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+#yeti{
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    height: 40px;
+}
