@@ -113,11 +113,8 @@ nav ul li a:hover{
     justify-content: center;
 }
 
-.img{
-    display: inline-block;
-    width: 200px;
-    height: 210px;
-    margin-left: 10px;
+.h3 ,.h2{
+    font-weight: bolder;
 }
 
 
