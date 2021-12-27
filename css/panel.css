@@ -64,3 +64,36 @@ header h1{
 .selections .cikis:hover{
     background-color: red;
 }
+
+.a{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.kutu{
+    width: 330px;
+    height: 600px;
+    border: 1px solid #02b8dd;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.aktif{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.aktif span{
+    font-size: 40px;
+    color: #02b8dd;
+}
+
+.kutu3{
+    overflow-y: auto;
+}
+
+.kutu3 span{
+    color: grey;
+    font-size: 20px;
+}
