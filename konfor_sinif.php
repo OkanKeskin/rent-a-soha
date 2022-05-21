@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
+    
 <?php 
 
 include "backend/dbbaglan.php";
 
 
-$sql = "SELECT * FROM arac as a inner join arac_kategori as ktg on a.kat_id=ktg.kat_id ";
+$sql = "SELECT * FROM arac as a inner join arac_kategori as ktg on a.kat_id=ktg.kat_id where a.kat_id=2 ";
 
 $result = $conn -> query($sql);
 
@@ -16,36 +17,38 @@ if($result->num_rows > 0 ){
 
 
 ?>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="css/tum_araclar.css">
-<title>Tüm Araçlar</title>
-<link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/tum_araclar.css">
+    <title>Ekonomik Sınıf</title>
+    <link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
 </head>
+
 <body>
 <?php include "NavBar.php"   ?>
 
-            <!--SINIF İSMİ YAZISI BAŞLANGIÇ-->
-            <div class="jumbotron">
-            <h1 class="display-4">Tüm Araçlar</h1>
-            
-            <hr class="my-4">
-            <p>Aracınızı seçerek kolayca rezerve edebilirsiniz.</p>
-            
-            </div>
-
-            <!--SINIF İSMİ YAZISI bitiş-->
+        <!--SINIF İSMİ YAZISI BAŞLANGIÇ-->
+        <div class="jumbotron">
+        <h1 class="display-4">Konfor Araçlar</h1>
         
+        <hr class="my-4">
+        <p>Aracınızı seçerek kolayca rezerve edebilirsiniz.</p>
+        
+      </div>
 
-            <div class="row">
+       <!--SINIF İSMİ YAZISI BAŞLANGIÇ-->
+
+      
+
+       <div class="row">
         
         <?php   
         while ($row=$result->fetch_assoc()){
@@ -161,8 +164,9 @@ else{
   echo "sonuç yok";
 }  ?>
 </div>
-     <!-- FOOTER -->
-     <div class="footer-top">
+                
+                <!-- FOOTER -->
+    <div class="footer-top">
         <img src="assets/logo2.png" height="100" width="230" alt="" srcset="" />
         <div class="footer-nav">
           <ul>
@@ -247,7 +251,6 @@ else{
       </footer>
   
       <!-- FOOTER -->
-    
 
 
 
@@ -255,11 +258,13 @@ else{
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
-    
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+                <script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+
 </body>
+
 </html>
