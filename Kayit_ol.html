@@ -92,49 +92,49 @@
             
 
 
-            <form onsubmit="return pass()" method="post">
+            <form onsubmit="return pass()" method="post" action="./backend/kayitOl.php">
               
 
               <div1>
                 <label for="ad">Adınız (ehliyetinizde yer aldığı gibi)</label><br>
-              <input required id="ad" type="text" autofocus> 
+              <input required id="ad" type="text" name="adi" autofocus> 
               </div1>
 
               
               <div2>
                 <label for="sAd">Soyadınız (ehliyetinizde yer aldığı gibi)</label><br>
-              <input required id="sAd" type="text"> 
+              <input required id="sAd" name="sadi"type="text"> 
               </div2>
               
               
               <div1>
               <label for="TC">T.C. No yada Pasaport No</label><br>
-              <input required id="TC" type="text" pattern="^[0-9]{9 or 11}$" minlength="9" maxlength="11"> <br>
+              <input required id="TC" type="text" pattern="^[0-9]{9 or 11}$" minlength="9" maxlength="11" name="tc"> <br>
              </div1>
 
               <div2>
               <label for="date">Doğum Tarihi</label><br>
-              <input required id="date" type="date"> <br>
+              <input required id="date" type="date" name="dtarihi"> <br>
              </div2>
 
               <div1>
               <label for="CepTel">Cep Telefonu</label><br>
-              <input required id="CepTel" type="text" pattern="^05[0-9]{9}$" minlength="11" maxlength="11" value="05"> <br>
+              <input required id="CepTel" type="text" pattern="^05[0-9]{9}$" minlength="11" maxlength="11" value="05" name="ceptel"> <br>
              </div1>
              
               <div2>
               <label for="email">E-Posta</label><br>
-              <input required id="email" type="email"> <br>
+              <input required id="email" type="email" name="eposta"> <br>
              </div2>
 
               <div1>
               <label for="password">Şifre</label><br>
-              <input required id="password" type="password" autocomplete="off" minlength="7" maxlength="23"> <br>
+              <input required id="password" type="password" autocomplete="off" minlength="7" maxlength="23" name="sifre"> <br>
              </div1>
 
               <div2>
               <label for="passwordT">Şifre Tekrar</label><br>
-              <input required id="passwordT" type="password" autocomplete="off" minlength="7" maxlength="23"> <br>
+              <input required id="passwordT" type="password" autocomplete="off" minlength="7" maxlength="23" name="tsifre"> <br>
              </div2>
 
              <input class="checkbox" id="uyelik" type="checkbox" required>
@@ -151,7 +151,7 @@
 
 
 
-              <button type="submit" class="btn btn-primary">Gönder</button>
+              <input type="submit" class="btn btn-primary" name="gonder">
                 
             </form>
         </div>
