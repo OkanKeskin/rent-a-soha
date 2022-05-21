@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<?php 
+
+include "backend/dbbaglan.php";
+
+
+$sql = "SELECT * FROM arac ";
+
+$result = $conn -> query($sql);
+
+if($result->num_rows > 0 ){
+
+
+
+?>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,57 +31,7 @@
 <link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
 </head>
 <body>
-    <div class="container">
-        <!-- HEADER -->
-        <header class="mt-3">
-
-            <!-- LOGO -->
-            <div class="logo">
-                <a href="index.html"><img src="assets/logo.png" height="70" alt=""></a>
-            </div>
-            <!-- LOGO -->
-
-            <!-- MENU -->
-            <nav class="navbar">
-                <ul>
-                    <li>
-                        <a href="rezervasyonlarım.html">Rezervasyon</a>
-                        <ul class="acilir">
-                            <li><a href="rezervasyonlarım.html">Rezervasyonlarım</a></li>
-                            <li><a href="rezerve_olustur.html">Rezerve Oluştur</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="tum_araclar.html">Araçlarımız</a>
-                        <ul class="acilir">
-                            <li><a href="tum_araclar.html">Tüm Araçlar</a></li>
-                            <hr>
-                            <li><a href="ekonomik_sinif.html">Ekonomik Sınıf Araçlar</a></li>
-                            <li><a href="konfor_sinif.html">Konfor Sınıf Araçlar</a></li>
-                            <li><a href="premium_sinif.html">Premium Sınıf Araçlar</a></li>
-                            <li><a href="luks_araclar.html">Lüks Sınıf Araçlar</a></li>
-                            <li><a href="prestij_sinif.html">Prestij Sınıf Araçlar</a></li>
-                          </ul>
-                    </li>
-                    <li><a href="iletişim.html">İletişim</a></li>
-                </ul>
-                <div class="login">
-                    <a style="padding: 0;" href="">Giriş Yap</a>
-                    <svg style="padding: 2px;" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
-                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                    </svg>
-                    <span>/</span>
-                    <a style="padding: 2px;" href="Kayit_ol.html">Üye Ol</a>
-                    
-                </div>
-            </nav>
-            <!-- MENU -->
-
-            
-        </header>
-        <!-- HEADER -->
-    </div>
+   
 
             <!--SINIF İSMİ YAZISI BAŞLANGIÇ-->
             <div class="jumbotron">
@@ -76,27 +42,15 @@
             
             </div>
 
-            <!--SINIF İSMİ YAZISI BAŞLANGIÇ-->
+            <!--SINIF İSMİ YAZISI bitiş-->
         
 
-    <!-- TÜM araçlar BAŞLANGIÇ -->
-    <div class="tum_araclar">
+            <div class="row">
+        
+        <?php   
+        while ($row=$result->fetch_assoc()){
 
-
-
-        
-        <!-- Ekonomik araçlar Başlangıç -->
-        <div class="araclar_satir_ayrimi"  >
-        
-        
-        
-        
-        
-        
-            <!-- ROW BAŞLANGIÇ -->
-            <div class="row" >
-        
-        
+        ?>
                 <div class="col-sm-4"  ><!-- Cols-1 BAŞLANGIÇ-->
         
                 <!-- CİTROEN C3 BAŞLANGIÇ-->
@@ -107,11 +61,11 @@
         
                     <div class="card" >
                         <div class="card-header" >
-                            <div class="arac_isim"> <h3>Citroen C3</h3></div>
-                            <div class="arac_sinif"> <p>Ekonomik Araç</p></div>
+                            <div class="arac_isim"> <h3><?php echo $row['arac_adi'] ;  ?></h3></div>
+                            <div class="arac_sinif"> <p>ekonomik</p></div>
                             
                     </div>
-                        <img class="card-img-top" src="assets/f-citroen-c3.png" alt="resim">
+                        <img class="card-img-top" src="<?php echo $row['arac_foto'] ;?>" alt="resim" style="max-width: 100%;" >
                         <div class="card-body">
                         
                         <div  class="resim_alti_bilgi"> <!--RESİM ALTI BİLGİLENDİRME BAŞLANGIÇ-->
@@ -124,27 +78,27 @@
                                             <ul   class="icon-list">
                                                 <li>
                                                     <i class="fa fa-users"></i>
-                                                    <span> 5 Yetişkin</span>
+                                                    <span><?php echo $row['kapi_sayisi'] ;  ?> </span>
                                                 </li>
                                                 <li>
                                                     <i class="fas fa-suitcase-rolling"></i>
-                                                    <span>   2 Büyük Bavul</span>
+                                                    <span> <?php echo $row['airbag_sayisi'] ;  ?></span>
                                                 </li>
                                                 <li>
                                                     <i class="fas fa-user-friends"></i>
-                                                    <span>Yolcu Airbag</span>
+                                                    <span><?php echo $row['bagaj_hacmi'] ;  ?></span>
                                                 </li>
                                                 <li>
                                                     <i class="fa fa-automobile"></i>
-                                                    <span> ABS</span>
+                                                    <span><?php echo $row['fren_sistemi'] ;  ?></span>
                                                 </li>
                                                 <li>
                                                     <i class="fa fa-car"></i>
-                                                    <span>Dizel/Benzin</span>
+                                                    <span><?php echo $row['yakit_sistemi'] ;  ?></span>
                                                 </li>
                                                 <li>
                                                     <i class="fa fa-automobile"></i>
-                                                    <span>Otomatik</span>
+                                                    <span><?php echo $row['sanziman_sistemi'] ;  ?></span>
                                                 </li>
                             
                                             </ul>
@@ -178,6 +132,7 @@
                                         </div><!--KİRALAMA KOŞULLARI alt başlık BİTİŞ-->
                                     </div> <!--KİRALAMA KOŞULLARI BİTİŞ-->
                                         </div><!--RESİM ALTI BİLGİLENDİRME BİTİŞ-->
+
                                         <div class="button"> <!--BUTON BAŞLANGIÇ-->
                                             
                                             <a href="rezerve_olustur.html" class="btn btn-danger">Rezerve et</a>
@@ -197,15 +152,15 @@
             <!-- CİTROEN C3 BİTİŞ-->
         
         </div><!-- Cols-1 bitiş-->
-        
-
-        
-        </div><!-- TÜM araçlar BİTİŞ -->
+       
 
 
-    </div>
 
-
+<?php }} 
+else{
+  echo "sonuç yok";
+}  ?>
+</div>
      <!-- FOOTER -->
      <div class="footer-top">
         <img src="assets/logo2.png" height="100" width="230" alt="" srcset="" />
