@@ -24,6 +24,7 @@ if($sifre == $sifreT){
     $stmt->bind_param("sssssssi",$ad, $soyad, $tc,$dogumTar,$ceptel,$eposta,$sifre,$rol_id);
     $stmt->execute();
     if($stmt ==TRUE){
-        echo "İşlem Başarılı";
+        include '../uyeOlBasarili.html';
+        header("Refresh: 5; url=../Giris.html");
     }
 }
