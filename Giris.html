@@ -14,12 +14,12 @@
     <div class="kutu">
         <div class="kutu_kutu">
                     <div class="giris">Giriş Yap</div>
-                <form action="index.html" method="post">
-                <input autofocus placeholder="E-posta Adresinizi Giriniz." required id="email" type="email"> <br>
-               
-                <input placeholder="Şifrenizi Giriniz." required id="password" type="password" autocomplete="off" minlength="7" maxlength="23"> <br>
-               
-               <button type="submit">Giriş Yap</button>
+                <form action="./backend/girisYap.php" method="post">
+                    <input autofocus placeholder="E-posta Adresinizi Giriniz." required id="email" type="text" name="eposta"> <br>
+                
+                    <input placeholder="Şifrenizi Giriniz." required id="password" type="password" autocomplete="off" minlength="7" maxlength="23" name="sifre"> <br>
+                
+                    <input type="submit" value="Giriş Yap" name="gonder" style="background: #02b8dd; color: white;">
                 </form>
             
 

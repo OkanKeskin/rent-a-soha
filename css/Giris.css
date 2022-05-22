@@ -57,7 +57,7 @@ input{
     color: black;
     margin-top: 15px;
 }
-button{
+input[type="submit"]{
     min-width: 100%!important;
     margin-top: 32px;
     -webkit-box-align: center;
@@ -81,6 +81,6 @@ button{
     font-size: 16px;
     height: 56px;
 }
-button:hover{
+input[type="submit"]:hover{
     background-color: rgba(77, 211, 238, 0.89)
 }
