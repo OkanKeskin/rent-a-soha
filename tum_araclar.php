@@ -4,7 +4,7 @@
 
 <?php 
 
-include "backend/dbbaglan.php";
+include "./backend/dbbaglan.php";
 
 
 $sql = "SELECT * FROM arac as a inner join arac_kategori as ktg on a.kat_id=ktg.kat_id ";
@@ -78,7 +78,7 @@ if($result->num_rows > 0 ){
                                             <ul   class="icon-list">
                                                 <li>
                                                     <i class="fa fa-users"></i>
-                                                    <span><?php echo $row['kapi_sayisi'] ;  ?> </span>
+                                                    <span><?php echo $row['kapı_sayisi'] ;  ?> </span>
                                                 </li>
                                                 <li>
                                                     <i class="fas fa-suitcase-rolling"></i>

@@ -11,6 +11,7 @@
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
+            /*
           $(".kayit").click(function(){
             var adi = $("#arac-adi").val();
             $("#isim").text(adi);
@@ -39,7 +40,7 @@
             var kat =$('#sanziman').find(":selected").text();
             $("#sanzimanSistem").text(kat)
           })
-
+        */
           var side = $("#side");
             var sidebar = $("#sidebar");
             var cross = $("#cross");
@@ -93,73 +94,73 @@
             <h2 id="baslik">Araç Ekle</h2>
             <div class="row">
               <div class="veri-al col-6">
-                <form class="row g-3 needs-validation m-2" novalidate>
+                <form class="row g-3 needs-validation m-2" action="../backend/aracekleme.php" method="post" novalidate>
                   <div class="col-md-12">
                     <label for="validationCustom01" class="form-label">Araç Adı</label>
-                    <input type="text" class="form-control" id="arac-adi" required>
+                    <input type="text" class="form-control" id="arac-adi" name="adi" required>
                   </div>
                   <div class="col-md-12">
                     <label class="form-label">Araç Kategorisi</label>
-                    <select class="form-select" required id="list">
+                    <select class="form-select" required id="list" name="kategori">
                       <option selected disabled value="">Kategoriler</option>
-                      <option value="val1">Ekonomik Sınıf</option>
-                      <option value="val2">Konfor Sınıf</option>
-                      <option value="val2">Konfor Sınıf</option>
-                      <option value="val4">Lüks Sınıf</option>
-                      <option value="val5">Premium Sınıf</option>
-                      <option value="val6">Prestij Sınıf</option>
+                      <option value="Ekonomik Sınıf">Ekonomik Sınıf</option>
+                      <option value="Konfor Sınıf">Konfor Sınıf</option>
+                      <option value="Konfor Sınıf">Konfor Sınıf</option>
+                      <option value="Lüks Sınıf">Lüks Sınıf</option>
+                      <option value="Premium Sınıf">Premium Sınıf</option>
+                      <option value="Prestij Sınıf">Prestij Sınıf</option>
                     </select>
                   </div>
                   <div class="col-md-12">
                       <label class="form-label">Araç Fotoğraf Linki</label>
-                      <input type="text" class="form-control" id="foto" required>
+                      <input type="text" class="form-control" id="foto" name="fotolink" required>
                   </div>
                   <div class="col-md-12">
                       <label class="form-label">Araç Kapı Sayısı</label>
-                      <select class="form-select" id="kapiList" required>
+                      <select class="form-select" id="kapiList" name="kapiSayisi" required>
                         <option selected disabled value="">Kategoriler</option>
-                        <option>3 Yetişkin</option>
-                        <option>5 Yetişkins</option>
+                        <option value="3 Yetişkin">3 Yetişkin</option>
+                        <option value="5 Yetişkin">5 Yetişkins</option>
                       </select>
                     </div>
                     <div class="col-md-12">
                       <label class="form-label">Araç Bağaj Hacmi (kg)</label>
-                      <input type="text" class="form-control" id="kg" required>
+                      <input type="number" class="form-control" id="kg" name="bagajHacmi" required>
                   </div>
                   <div class="col-md-12">
                       <label class="form-label">Airbag Sayısı</label>
-                      <input type="text" class="form-control" id="air" required>
+                      <input type="number" class="form-control" id="air" name="airbagSayisi" required>
                   </div>
                   <div class="col-md-12">
                       <label class="form-label">Fren Sistemi</label>
-                      <select class="form-select" id="fren" required>
+                      <select class="form-select" id="fren" name="frenSistemi" required>
                           <option selected disabled value="">Fren Sistemi</option>
-                          <option>ABS</option>
-                          <option>ESP</option>
-                          <option>Havalı</option>
-                          <option>Hidrolik</option>
+                          <option value="ABS">ABS</option>
+                          <option value= "ESP">ESP</option>
+                          <option value="Havalı">Havalı</option>
+                          <option value="Hidrolik">Hidrolik</option>
                         </select>
                   </div>
                   <div class="col-md-12">
                       <label class="form-label">Araç Yakıt Sistemi</label>
-                      <select class="form-select" id="yakit" required>
+                      <select class="form-select" id="yakit" name="yakitSistemi" required>
                           <option selected disabled value="">Yakıt Sistemi</option>
-                          <option>Benzin</option>
-                          <option>Benzin/Gaz</option>
-                          <option>Dizel</option>
-                          <option>Gaz</option>
+                          <option value="Benzin">Benzin</option>
+                          <option value="Benzin/Gaz">Benzin/Gaz</option>
+                          <option value="Dizel">Dizel</option>
+                          <option value="Gaz">Gaz</option>
                         </select>
                   </div>
                   <div class="col-md-12">
                       <label class="form-label">Araç Şanzıman Sistemi</label>
-                      <select class="form-select" required id="sanziman">
+                      <select class="form-select" required id="sanziman" name="sanziman">
                           <option selected disabled value="">Şanzıman Sistemi</option>
-                          <option>Otomatik</option>
-                          <option>Manuel</option>
+                          <option value="Otomatik">Otomatik</option>
+                          <option value="Manuel">Manuel</option>
                         </select>
                   </div>
                   <div class="col-md-12">
-                    <button class="btn btn-success col-md-12 kayit" id="gonder" type="button">Araç Ekle</button>
+                    <input class="btn btn-success col-md-12 kayit" id="gonder" type="submit" name="gonder">
                   </div>
                 </form>
                 </div>
