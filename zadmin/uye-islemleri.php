@@ -80,10 +80,10 @@
     <div class="panel-container">
         <div class="selections" id="sidebar">
             <ul>
-                <li><a href="arac-ekle.html">Araç Ekle</a></li>
-                <li><a href="arac-guncelle.html">Araç Güncelle/Sil</a></li>
-                <li><a href="uye-islemleri.html">Üye İşlemleri</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="arac-ekle.php">Araç Ekle</a></li>
+                <li><a href="arac-guncelle.php">Araç Güncelle/Sil</a></li>
+                <li><a href="uye-islemleri.php">Üye İşlemleri</a></li>
+                <li><a href="iletisim.php">İletişim</a></li>
             </ul>
             <a class="cikis" href="../index.html">Çıkış Yap</a>
         </div>
