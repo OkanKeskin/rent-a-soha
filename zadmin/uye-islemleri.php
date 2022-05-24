@@ -51,35 +51,7 @@ $result = $conn -> query($sql);
                 })
             })
 
-            con.hide();
-            up.hide();
-            down.click(function(){
-                numG.text(num.text())
-                con.slideToggle("slow",function(){
-                    con.show();
-                    up.show();
-                    down.hide();
-                })
-            })
-
-            up.click(function(){
-                con.slideToggle("slow",function(){
-                    con.hide();
-                    up.hide()
-                    down.show();
-                })
-            })
-            
-            kay.click(function(){
-                var yeti =$("#yeti").find(":selected").text();
-                $("#yetii").text(yeti);
-
-                var ad = $("#adsoy").val();
-                $("#ads").text(ad);
-
-                var epos = $("#epos").val();
-                $("#epost").text(epos);
-            })
+    
 
         })
     </script>
@@ -144,35 +116,7 @@ $result = $conn -> query($sql);
                         <th scope="col" id="yetii"><?php echo $row["rol_id"] == 1 ? "Admin" : "Kullanıcı" ?></th>
                         <th scope="col" id="epost"><?php echo $row["eposta"] ?></th>
                         <th scope="col">
-                            <svg id="down" class="down" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                                <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                            </svg>
-                            <svg id="up" class="up" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
-                                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
-                            </svg>
-                        </th>
-                        <th class="con">
-                            <div class="conn">
-                                <table class="table con" id="con">
-                                      <tr>
-                                          <th scope="col" id="numG" class="m-0 numG"></th>
-                                          <th scope="col"><input type="text" class="adsoy" id="adsoy" placeholder="Ad Soyad"></th>
-                                          <th scope="col">123</th>
-                                          <th scope="col">
-                                              <select name="" id="yeti">
-                                                  <option selected value="admin">Admin</option>
-                                                  <option value="uye">Üye</option>
-                                              </select>
-                                          </th>
-                                          <th scope="col"><input type="text" class="adsoy" id="epos" placeholder="E-Posta"></th>
-                                          <th scope="col">
-                                                <button class="btn btn-success" id="kay">Kaydet</button>
-                                          </th>
-                                      </tr>
-                                </table>
-                            </div>
+                            <a href="../backend/uyeGuncelle.php/?id=<?php echo $row["kul_id"] ?>" class="btn btn-success" id="kay" value="Güncelle">Güncelle</a>
                         </th>
                     </tr>
                     <?php }}?>
