@@ -128,7 +128,6 @@ $result = $conn -> query($sql);
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Ad Soyad</th>
-                        <th scope="col">Kullanıcı Numarası</th>
                         <th scope="col">Yetki Derecesi</th>
                         <th scope="col">E-Posta</th>
                         <th scope="col">Güncelle</th>
@@ -142,7 +141,6 @@ $result = $conn -> query($sql);
                       <tr>
                         <th scope="col" id="num" class="num"><?php echo $row["kul_id"] ?></th>
                         <th scope="col" id="ads"><?php echo $row["adi"] . " " . $row["soyadi"] ?></th>
-                        <th scope="col">123</th>
                         <th scope="col" id="yetii"><?php echo $row["rol_id"] == 1 ? "Admin" : "Kullanıcı" ?></th>
                         <th scope="col" id="epost"><?php echo $row["eposta"] ?></th>
                         <th scope="col">
