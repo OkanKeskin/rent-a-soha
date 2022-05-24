@@ -99,7 +99,8 @@ nav ul li a:hover{
 /*REZERVASYONLARIM BAŞLANGIÇ*/
 .rezervasyonlarım_bolumu{
     margin-top: 8cm;
-    margin-left: 3cm;
+    margin-left: 6cm;
+    margin-bottom: 2cm;
     display: flexbox;
     align-items: center;
     font-family: 'Mukta', sans-serif;
@@ -112,7 +113,7 @@ nav ul li a:hover{
     width: 70%;
     right: 0;
     left: 0;
-    height: 400px;
+    height: 500px;
     background-color: #02b8dd;
     
 }
@@ -243,16 +244,16 @@ text-align: start;
 
 }
 .tablo{
-    margin-top: 20px;
+    
     text-align: left;
     color: white;
-    margin-right:50px ;
+   
 }
 .sagdaki_yazi_bolumu2{
     width: 30%;
     color: white;
     font-size: 20px;
-top: 20%;
+
 right: 0;
 position: absolute;
 text-align: left;
