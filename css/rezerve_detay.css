@@ -106,10 +106,10 @@ nav ul li a:hover{
 }
 .kirmizi_bolum{
     position: relative;
-    top: 50%;
+   
     transform: translateY(-50%);
     text-align: center;
-    width: 70%;
+    width: 80%;
     right: 0;
     left: 0;
     height: 400px;
@@ -151,8 +151,8 @@ padding: 70px;
     width: 30%;
     color: white;
     font-size: 20px;
-top: 20%;
-right: 0;
+height: 30%;
+right: 1.5cm;
 position: absolute;
 text-align: left;
 box-sizing: border-box;
@@ -172,7 +172,7 @@ text-align: start;
 
 }
 #table{
-    width: 300px;
+    width: 400px;
     text-align: left;
     
 }

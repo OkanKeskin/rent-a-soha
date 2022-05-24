@@ -41,12 +41,7 @@ if(isset($_POST["gonder"])){
         else{
             echo "oturum açılmadı hata";
         }
-    // if($row){
-    //     print $row['adi'] . "\t";
-    // }
-    // else{
-    //     echo "yok";
-    // }
+    
     
     
     

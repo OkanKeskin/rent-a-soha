@@ -81,7 +81,7 @@ if($result->num_rows > 0 ){
                                             <ul   class="icon-list">
                                                 <li>
                                                     <i class="fa fa-users"></i>
-                                                    <span><?php echo $row['kapi_sayisi'] ;  ?> </span>
+                                                    <span><?php echo $row['kapı_sayisi'] ;  ?> </span>
                                                 </li>
                                                 <li>
                                                     <i class="fas fa-suitcase-rolling"></i>
