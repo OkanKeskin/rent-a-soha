@@ -86,7 +86,7 @@
  <form action="backend/rezerve_olustur.php" method="post">                                                  <!--FORM BAŞLANGIÇ-->
       <table  class="table table-inverse text-white  ">
         <tr>
-          <header>
+         
           <th><label for="my-select">Araç Seç</label></th>
           <td ><select id="arac" class="form-control" name="arac_id" onchange="showDays()">
             <option value="1">Fiat Egea</option>
@@ -99,7 +99,7 @@
           
         </tr>
         
-      </header>
+      
         <tr>
           <th><label for="my-select">Teslim Alma Ofisi</label></th>
           <td ><select id="alis_ofisi" class="form-control" name="teslim_alma_ofisi">
