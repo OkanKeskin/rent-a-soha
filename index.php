@@ -1,3 +1,14 @@
+<?php 
+    session_start();
+    include './backend/dbbaglan.php';
+    $eposta = isset($_SESSION['eposta']) ? $_SESSION['eposta'] : '';
+    $sql = "SELECT * FROM kullanici WHERE eposta = '$eposta'";
+
+    $result = $conn -> query($sql); 
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -67,7 +78,13 @@
             <li><a href="iletişim.html">İletişim</a></li>
           </ul>
           <div class="login">
-            <a href="kisiselSayfa.php">Kendim</a>
+          <?php
+                        if($result->num_rows > 0 ){
+                            while ($row=$result->fetch_assoc()){
+            ?>
+            <a href="kisiselSayfa.php"><?php echo $row["adi"] ." ". $row["soyadi"] ?></a>
+            <?php }}?>
+            <?php if($result->num_rows > 0){}else{ ?>
             <a style="padding: 0" href="giris.html">Giriş Yap</a>
             <svg
               style="padding: 2px"
@@ -89,6 +106,7 @@
             </svg>
             <span>/</span>
             <a style="padding: 2px" href="Kayit_ol.html">Üye Ol</a>
+            <?php }?>
           </div>
         </nav>
         <!-- MENU -->
