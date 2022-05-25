@@ -35,7 +35,7 @@ if(isset($_POST["gonder"])){
             $_SESSION['sifre']=$sifre;
             
             include '../girisYapBasarili.html';
-            header("Refresh: 4; url=../index.html");
+            header("Refresh: 4; url=../index.php");
             
         }
         else{

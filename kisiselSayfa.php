@@ -1,6 +1,11 @@
 <?php
     include './backend/dbbaglan.php';
     session_start();
+    $sql = "SELECT * FROM kullanici where eposta = '{$_SESSION['eposta']}' ";
+
+    $result = $conn -> query($sql);
+
+    if($result->num_rows > 0 ){         
 ?>
 
 <!DOCTYPE html>
@@ -81,6 +86,10 @@
             height: 90%;
             background-color: rgb(38, 73, 73);
         }
+        .bilgiler{
+            display: flex;
+            flex-direction: column;
+        }
         .bilgiler .denenm{
             padding: 30px;
             display: flex;
@@ -91,10 +100,6 @@
         }
         .denenm h4,label{
             font-size: x-large;
-        }
-        .bilgiler a{
-            
-            margin: 20px auto;
         }
         .guncelle{
             margin: 40px auto;
@@ -123,26 +128,30 @@
             <a class="cikis" href="./backend/cikisYap.php">Çıkış Yap</a>
         </div>
         <div class="right">
+            <?php 
+            while ($row=$result->fetch_assoc()){
+                ?>
             <h1>Kullanıcı Bilgileri</h1>
             <div class="bilgiler">
                 <div class="denenm" >
                     <label for="name">AD: </label>
-                    <h4>OKAN KESKİN</h4>
+                    <h4><?php echo $row["adi"] . " " .$row["soyadi"] ?></h4>
                 </div>
                 <div class="denenm" >
                     <label for="name">Eposta: </label>
-                    <h4></h4>
+                    <h4><?php echo $row["eposta"]?></h4>
                 </div>
                 <div class="denenm" >
-                    <label for="name">Doğum Tarihi: </label>
-                    <h4></h4>
+                    <label for="name">Doğum Tarihi:  </label>
+                    <h4><?php echo $row["dogum_tar"]?></h4>
                 </div>
                 <div class="denenm" >
                     <label for="name">Cep Telefonu: </label>
-                    <h4></h4>
+                    <h4><?php echo $row["cep_tel"]?></h4>
                 </div>
-                <a class="guncelle" href="./backend/cikisYap.php">Bilgilerimi Güncelle</a>
+                <a class="guncelle" href="./backend/uyeKendiGuncelleme.php">Bilgilerimi Güncelle</a>
             </div>
+            <?php }} ?>
         </div>
     </div>
 </body>
