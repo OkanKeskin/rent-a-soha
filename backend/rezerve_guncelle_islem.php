@@ -27,7 +27,7 @@ if(isset($_POST["teslim_alma_ofisi"])){
         $rezid=$_SESSION["rez"];
 
 
-        $sql  = "UPDATE rezervasyon SET teslim_alma_ofisi='".$tao."',teslim_etme_ofisi='".$teo."',rez_tar='".$tat."',teslim_etme_tarihi='".$tet."',teslim_alma_saati='".$tas."',teslim_etme_saati='".$tes."',rezervasyon_guncelleme_tarihi=DATE(NOW()) WHERE rez_id=".$rezid." ";
+        $sql  = "UPDATE rezervasyon SET teslim_alma_ofisi='".$tao."',teslim_etme_ofisi='".$teo."',teslim_alma_tarihi='".$tat."',teslim_etme_tarihi='".$tet."',teslim_alma_saati='".$tas."',teslim_etme_saati='".$tes."',rezervasyon_guncelleme_tarihi=DATE(NOW()) WHERE rez_id=".$rezid." ";
 
         $result = $conn -> query($sql);
 

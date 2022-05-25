@@ -45,6 +45,6 @@ $sql->bind_param("iissiiississ",$rez_id,$kul_id,$teslim_alma_tarihi,$teslim_etme
   //$stmt->execute(array($rez_id,$kul_id,$teslim_alma_tarihi,$teslim_etme_tarihi,$arac_id,$teslim_alma_ofisi,$teslim_etme_ofisi,$teslim_alma_saati,$teslim_etme_saati,$fiyat,$rezervasyon_olusturma_tarihi,$rezervasyon_guncelleme_tarihi));
   $sql->execute();
   echo "Yükleniyor......";
-  //header('Refresh:5; url=../rezerve_olustur.html');
+  header('Refresh:5; url=../rezerve_olustur.php');
 }
 ?>

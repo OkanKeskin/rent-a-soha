@@ -33,7 +33,7 @@
        $_SESSION["arac_adi"]=$row["arac_adi"];
        $_SESSION["rez"]=$rezid;
       
-       $teslim_al = date("Y-m-d", strtotime($row["rez_tar"]));  
+       $teslim_al = date("Y-m-d", strtotime($row["teslim_alma_tarihi"]));  
        $_SESSION["rez_tar"]= $teslim_al;
 
        $teslim_et = date("Y-m-d", strtotime($row["teslim_etme_tarihi"])); 

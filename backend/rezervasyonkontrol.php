@@ -32,7 +32,7 @@ if(isset($_POST["rezno"])){
         $_SESSION["rez"]=$rezid;
         $_SESSION["adi"]=$row["adi"];
         $_SESSION["soy"]=$soyad;
-        $_SESSION["rez_tar"]=$row["rez_tar"];
+        $_SESSION["rez_tar"]=$row["teslim_alma_tarihi"];
         $_SESSION["teslim_etme_tarihi"]=$row["teslim_etme_tarihi"];
         
         
