@@ -1,5 +1,39 @@
 <?php 
-    
+    include '../backend/dbbaglan.php';
+    $sql = "SELECT * FROM iletisim";
+
+    $result = $conn -> query($sql);
+    if(isset($_GET["id"])){
+        $a = "SELECT * FROM iletisim WHERE mesaj_id = {$_GET['id']}";
+        $results = $conn -> query($a);
+        if($results->num_rows > 0){
+            while ($rows=$results->fetch_assoc()){
+                ?>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                </head>
+                <body>
+                    <script>
+                        function deneem(){
+                            <?php
+                                if($rows['mesaj'] != ""){
+                            ?>
+                            alert("<?php echo $rows['mesaj']; ?>");
+                            <?php }?>
+                        }
+                        deneem();
+                        
+                    </script>
+                </body>
+                </html>
+                <?php
+            }
+        }
+
+    }
+
+    if($result->num_rows > 0 ){
 
 ?>
 
@@ -44,11 +78,6 @@
             
         })
     </script>
-    <style>
-        #delete:hover{
-            color: red;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -84,42 +113,27 @@
                     <tr>
                       <th scope="col">#</th>
                       <th scope="col">Ad Soyad</th>
-                      <th scope="col">Kullanıcı Numarası</th>
-                      <th scope="col">Mesaj Başlığı</th>
                       <th scope="col">E-Posta</th>
                       <th scope="col">Sil</th>
                     </tr>
                   </thead>
                   <tbody>
+                    <?php
+                    while ($row=$result->fetch_assoc()){
+                    ?>
                         <tr id="mesage">
-                          <th scope="col" id="num" class="num">1</th>
-                          <th scope="col">Okan Keskin</th>
-                          <th scope="col">123</th>
-                          <th scope="col">Site Düzeni</th>
-                          <th scope="col">okannkeskn@gmail.com</th>
+                          <th scope="col" id="num" class="num"><?php echo $row["mesaj_id"]; ?></th>
+                          <th scope="col"><?php echo $row["adi"] ." ".$row["soyadi"]; ?></th>
+                          <th scope="col"><?php echo $row["eposta"]; ?></th>
                           <th scope="col">
-                              <svg id="down" class="down" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-                                  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                                  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                              </svg>
-                              <svg id="up" class="up" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
-                                  <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
-                                  <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
-                              </svg>
-                              <svg id="delete" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                              </svg>
+                            <a style="background: rgb(194, 152, 152); color: white; padding: 5px; text-decoration: none;" href="./iletisim.php?id=<?php echo $row["mesaj_id"]?>">Mesajı Görüntüle</a>
+                            <a style="background: rgb(194, 152, 152); color: white; padding: 5px; text-decoration: none;" href="../backend/iletisimSil.php?id=<?php echo $row["mesaj_id"]?>">Mesajı Sil</a>
                           </th>
-                        </tr>
-                        <tr id="acilir">
-                            <th scope="col" id="num" class="num">1</th>
-                            <th rowspan="5">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo id facilis vero, laudantium repellendus saepe numquam. Cum, id. Tenetur a nam excepturi ullam voluptatum doloremque numquam voluptatem neque ex vitae! Quaerat consectetur quam atque amet, soluta vel, ex nam assumenda est odit placeat impedit fugiat temporibus! Similique dolor impedit harum voluptas veniam, sit suscipit. Quae architecto temporibus asperiores rem praesentium corporis ducimus saepe? Quos, recusandae dolorem inventore sapiente quisquam fuga facere nulla dolore nobis! Consequuntur quam delectus, dicta quasi veritatis sequi distinctio illo debitis mollitia? Ex impedit eligendi eius, numquam ab, cum qui vitae exercitationem, amet nostrum error tempora obcaecati!</p>
-                            </th>
-                        </tr>
+                        </tr> 
+                    <?php }} ?>
                   </tbody>
             </table>
+            
         </div>
 </body>
 </html>

@@ -33,7 +33,6 @@ if(isset($_POST["gonder"])){
             $_SESSION['oturum']=true;
             $_SESSION['eposta']=$eposta;
             $_SESSION['sifre']=$sifre;
-            $_SESSION['kul_id']=$say["kul_id"];
             
             include '../girisYapBasarili.html';
         header("Refresh: 4; url=../index.html");
