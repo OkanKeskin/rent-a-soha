@@ -1,3 +1,9 @@
+<?php 
+    
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,29 +41,7 @@
                 })
             })
 
-            up.hide();
-            acilir.hide();
-            down.click(function(){
-                acilir.slideToggle("slow",function(){
-                    acilir.show();
-                    up.show();
-                    down.hide();
-                })
-            })
-
-            up.click(function(){
-                acilir.slideToggle("slow",function(){
-                    acilir.hide();
-                    up.hide()
-                    down.show();
-                })
-            })
             
-            delette.click(function(){
-                acilir.remove();
-                message.remove();
-            })
-
         })
     </script>
     <style>
