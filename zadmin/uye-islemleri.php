@@ -9,7 +9,7 @@ $result = $conn -> query($sql);
 
 
 
-?>i
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -116,7 +116,7 @@ $result = $conn -> query($sql);
                         <th scope="col" id="yetii"><?php echo $row["rol_id"] == 1 ? "Admin" : "Kullanıcı" ?></th>
                         <th scope="col" id="epost"><?php echo $row["eposta"] ?></th>
                         <th scope="col">
-                            <a href="../backend/uyeGuncelle.php/?id=<?php echo $row["kul_id"] ?>" class="btn btn-success" id="kay" value="Güncelle">Güncelle</a>
+                            <a href="../zadmin/uyeGuncelle.php?id=<?php echo $row["kul_id"] ?>" class="btn btn-success" id="kay" value="Güncelle">Güncelle</a>
                         </th>
                     </tr>
                     <?php }}?>
