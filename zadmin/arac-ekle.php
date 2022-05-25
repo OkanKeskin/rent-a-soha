@@ -117,7 +117,7 @@
                   </div>
                   <div class="col-md-12">
                       <label class="form-label">Araç Kapı Sayısı</label>
-                      <select class="form-select" id="kapiList" name="kapiSayisi" required>
+                      <select class="form-select" id="kapiList" name="kapıSayisi" required>
                         <option selected disabled value="">Kategoriler</option>
                         <option value="3 Yetişkin">3 Yetişkin</option>
                         <option value="5 Yetişkin">5 Yetişkins</option>

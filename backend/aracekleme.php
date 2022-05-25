@@ -18,7 +18,7 @@ if(isset($_POST["gonder"])){
     $adi = temizle($_POST["adi"]);
     $kategori = temizle($_POST["kategori"]);
     $fotolink = temizle($_POST["fotolink"]);
-    $kapiSayisi = temizle($_POST["kapiSayisi"]);
+    $kapıSayisi = temizle($_POST["kapıSayisi"]);
     $bagajHacmi = temizle($_POST["bagajHacmi"]);
     $airbagSayisi = temizle($_POST["airbagSayisi"]);
     $frenSistemi = temizle($_POST["frenSistemi"]);
@@ -50,7 +50,7 @@ else if($kategori == "Prestij Sınıf"){
     $katId = 5;
 }
 
-$stmt->execute(array($adi, $katId, $fotolink,$kapiSayisi,$airbagSayisi,$bagajHacmi,$frenSistemi,$yakitSistemi,$sanziman));
+$stmt->execute(array($adi, $katId, $fotolink,$kapıSayisi,$airbagSayisi,$bagajHacmi,$frenSistemi,$yakitSistemi,$sanziman));
 
 if($stmt ==TRUE){
     echo "Ekleme başarılı";
