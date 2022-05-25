@@ -85,7 +85,7 @@
     
 
 
-    
+  
   <!-- Rezervasyon Bölümü Başlangıç -->  <div class="rezervasyonlarım_bolumu">
       
   <!-- mavi Bölümü Başlangıç --><div class="kirmizi_bolum" id="kirmizi_bolum">

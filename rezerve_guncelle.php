@@ -49,7 +49,7 @@
        $_SESSION["teslim_alma_saati"]=$row["teslim_alma_saati"];
        $olusturma_tarihi = date("Y-m-d", strtotime($row["rezervasyon_olusturma_tarihi"])); 
        $_SESSION["rezervasyon_olusturma_tarihi"]=$olusturma_tarihi;
-      
+       $_SESSION["fiyat"]=$row["fiyat"];
 
    }
 ?>
@@ -154,7 +154,7 @@
                 <th><label for="my-select">Seçilen Araç</label></th>
                 <td ><?php echo $_SESSION["arac_adi"]   ?></td>
                 <th><label for="my-select">Fiyat</label></th>
-                <td >600 TL</td>
+                <td ><?php echo $_SESSION["fiyat"]." "."TL"   ?> </td>
               </tr>
               <tr>
                 <th><label for="my-select">Teslim Alma Ofisi</label></th>
@@ -189,7 +189,7 @@
               
               <tr>
                 <th>Rezervasyon Oluşturma Tarihi</th>
-                <td > <input type="date" class="form-control" name="lbs" value="<?php echo  $_SESSION["rezervasyon_olusturma_tarihi"]  ?>" ></td>
+                <td > <label ><?php echo date("d-m-y", strtotime($_SESSION["rezervasyon_olusturma_tarihi"]))   ?></label></td>
                
               </tr>
               

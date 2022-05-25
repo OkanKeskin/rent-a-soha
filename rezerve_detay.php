@@ -30,9 +30,18 @@
        if($result->num_rows ){
    
        $row=$result->fetch_assoc();
-
+      $foto=$row["arac_foto"];
+      $kat_adi=$row["kat_adi"];
+      $kapi=$row["kapı_sayisi"];
+      $airbag=$row["airbag_sayisi"];
+      $bagaj=$row["bagaj_hacmi"];
+      $fren=$row["fren_sistemi"];
+      $yakit=$row["yakit_sistemi"];
+      $sanziman=$row["sanziman_sistemi"];
        $_SESSION["arac_adi"]=$row["arac_adi"];
        $_SESSION["kapı_sayisi"]=$row["kapı_sayisi"];
+       $guncelleme=$row["rezervasyon_guncelleme_tarihi"];
+       $fiyat=$row["fiyat"];
        
       
 
@@ -133,23 +142,23 @@
     <table id="table" class="table table-striped table-hover" style="position:absolute ; margin-bottom: 2cm; height: 2cm;">
       <tr>
         <th>Rezervasyon Numarası</th>
-        <td id="rez_numara"><?php echo  $_SESSION["rez"];  ?></td>
+        <td id="rez_numara"><?php echo  $_SESSION["rez"]  ?></td>
       </tr>
       <tr>
         <th>Teslim Alım tarihi</th>
-        <td><?php  echo $_SESSION["rez_tar"];  ?></td>
+        <td><?php  echo date("d-m-Y", strtotime($_SESSION["rez_tar"]));  ?></td>
       </tr>
       <tr>
         <th>İade tarihi</th>
-        <td><?php  echo $_SESSION["teslim_etme_tarihi"];  ?></td>
+        <td><?php  echo date("d-m-Y", strtotime($_SESSION["teslim_etme_tarihi"]));   ?></td>
       </tr>
       <tr>
         <th>Güncelleme tarihi</th>
-        <td>25/12/2021</td>
+        <td><?php  echo date("d-m-Y", strtotime($guncelleme)); ?> </td>
       </tr>
       <tr>
         <th>Fiyat</th>
-        <th>600TL</th>
+        <th><?php  echo $fiyat." "."TL" ?></th>
       </tr>
     </table>
             </div><!-- Sağdaki Yazı Bölümü bitiş -->
@@ -175,11 +184,11 @@
             <h3><?php echo  $_SESSION["arac_adi"];  ?></h3>
         </div>
         <div class="arac_sinif">
-            <p><?php echo  $_SESSION["kat_adi"];  ?></p>
+            <p><?php echo  $kat_adi;  ?></p>
         </div>
 
     </div>
-    <img class="card-img-top" src="<?php echo  $_SESSION["arac_foto"];  ?>" alt="resim">
+    <img class="card-img-top" src="<?php echo  $foto;  ?>" alt="resim">
     <div class="card-body">
 
         <div class="resim_alti_bilgi">
@@ -190,27 +199,27 @@
                 <ul class="icon-list">
                     <li>
                         <i class="fa fa-users"></i>
-                        <span> <?php echo  $_SESSION["kapı_sayisi"];  ?></span>
+                        <span> <?php echo  $kapi." "."Kapı ";  ?></span>
                     </li>
                     <li>
                         <i class="fas fa-suitcase-rolling"></i>
-                        <span><?php echo  $_SESSION["airbag_sayisi"];  ?></span>
+                        <span><?php echo  $airbag." "." airbag ";  ?></span>
                     </li>
                     <li>
                         <i class="fas fa-user-friends"></i>
-                        <span><?php echo  $_SESSION["bagaj_hacmi"];  ?></span>
+                        <span><?php echo  $bagaj." "."Bavul";  ?></span>
                     </li>
                     <li>
                         <i class="fa fa-automobile"></i>
-                        <span> <?php echo  $_SESSION["yakit_sistemi"];  ?></span>
+                        <span> <?php echo  $yakit;  ?></span>
                     </li>
                     <li>
                         <i class="fa fa-car"></i>
-                        <span><?php echo  $_SESSION["fren_sistemi"];  ?></span>
+                        <span><?php echo  $fren;  ?></span>
                     </li>
                     <li>
                         <i class="fa fa-automobile"></i>
-                        <span><?php echo  $_SESSION["sanziman_sistemi"];  ?></span>
+                        <span><?php echo  $sanziman;  ?></span>
                     </li>
 
                 </ul>
