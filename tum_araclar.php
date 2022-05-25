@@ -76,17 +76,17 @@ if($result->num_rows > 0 ){
                                         <div class="item"><!--ARAÇ ÖZELLİKLERİ alt başlık BAŞLANGIÇ-->
                                             <b class="list-title">Araç Özellikleri</b>
                                             <ul   class="icon-list">
-                                                <li>
+                                            <li>
                                                     <i class="fa fa-users"></i>
-                                                    <span><?php echo $row['kapı_sayisi'] ;  ?> </span>
+                                                    <span><?php echo $row['kapı_sayisi']." "."Yetişkin" ;  ?> </span>
                                                 </li>
                                                 <li>
                                                     <i class="fas fa-suitcase-rolling"></i>
-                                                    <span> <?php echo $row['airbag_sayisi'] ;  ?></span>
+                                                    <span> <?php echo $row['airbag_sayisi']." "."Airbag" ;  ?></span>
                                                 </li>
                                                 <li>
                                                     <i class="fas fa-user-friends"></i>
-                                                    <span><?php echo $row['bagaj_hacmi'] ;  ?></span>
+                                                    <span><?php echo $row['bagaj_hacmi']." "."Bavul" ;  ?></span>
                                                 </li>
                                                 <li>
                                                     <i class="fa fa-automobile"></i>
