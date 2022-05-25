@@ -1,8 +1,8 @@
 <?php 
-session_start();
 
 
-   
+
+   if(isset($_GET["id"])){
         
         $sn="localhost";
         $un="root";
@@ -16,12 +16,13 @@ session_start();
         }
 
         $conn->set_charset("utf8");
-    
-        $rezid= $_SESSION["rez"];
+        
+        $arac_id = $_GET["id"];
+        
         
       
 
-        $sql  = "DELETE FROM rezervasyon where rez_id='".$rezid."' ";
+        $sql  = "DELETE FROM arac where arac_id = {$arac_id}  ";
 
         $result = $conn -> query($sql);
 
@@ -29,8 +30,8 @@ session_start();
         if($result==true){
     
        
-       include '../iptal_bilgi.html';
-       header("Refresh: 2; url=../rezervasyonlarim.php");
+       include '../bilgilerdogru.html';
+       header("Refresh: 2; url=../zadmin/arac-guncelle.php");
     }
     
     else{
@@ -41,7 +42,7 @@ session_start();
    
 
    
-   
+    }
    
    
 

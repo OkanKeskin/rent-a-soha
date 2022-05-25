@@ -32,7 +32,7 @@ if(isset($_POST["teslim_alma_ofisi"])){
         $result = $conn -> query($sql);
 
         if($result==true){
-            include '../rezerve_basarili.html';
+            include '../guncelleme_basarili.html';
             header("Refresh: 2; url=../rezervasyonlarim.php");
         }
         else{

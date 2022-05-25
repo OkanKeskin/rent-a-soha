@@ -28,7 +28,7 @@ if($result->num_rows > 0 ){
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/tum_araclar.css">
-    <title>Ekonomik Sınıf</title>
+    <title>Premium Sınıf</title>
     <link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
 </head>
 

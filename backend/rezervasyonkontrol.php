@@ -36,7 +36,7 @@ if(isset($_POST["rezno"])){
         $_SESSION["teslim_etme_tarihi"]=$row["teslim_etme_tarihi"];
         
         
-       include '../girisYapBasarili.html';
+       include '../bilgilerdogru.html';
        header("Refresh: 2; url=../rezerve_detay.php");
     }
     

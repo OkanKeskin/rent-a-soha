@@ -137,7 +137,7 @@
           
          <!-- Sağdaki Yazı Bölümü Başlangıç -->   <div class="sagdaki_yazi_bolumu" id="sagdaki_yazi_bolumu" style="position:absolute;margin-right:2cm;margin-bottom: 4cm;">
                 
-         <h3 class="top 0" id="isim" style="margin-top:0cm;"><?php echo  $_SESSION["adi"]." ".$_SESSION["soy"];  ?></h3>
+         <h3 class="top 0" id="isim" style="margin-top:0cm;text-align: center;"><?php echo  $_SESSION["adi"]." ".$_SESSION["soy"];  ?></h3>
     <br>
     <table id="table" class="table table-striped table-hover" style="position:absolute ; margin-bottom: 2cm; height: 2cm;">
       <tr>
