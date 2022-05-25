@@ -33,9 +33,15 @@ if(isset($_POST["gonder"])){
             $_SESSION['oturum']=true;
             $_SESSION['eposta']=$eposta;
             $_SESSION['sifre']=$sifre;
-            
-            include '../girisYapBasarili.html';
-            header("Refresh: 4; url=../index.php");
+            while( $row = $query->fetch(PDO::FETCH_ASSOC) ){
+                include '../girisYapBasarili.html';
+                if($row["rol_id"] == 1){
+                    header("Refresh: 2; url=../zadmin/panel.php");
+                }
+                else{
+                    header("Refresh: 2; url=../index.php");
+                }
+            }
             
         }
         else{
