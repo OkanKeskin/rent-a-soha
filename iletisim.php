@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    include './backend/dbbaglan.php';
+    $eposta = isset($_SESSION['eposta']) ? $_SESSION['eposta'] : '';
+    $sql = "SELECT * FROM kullanici WHERE eposta = '$eposta'";
+
+    $result = $conn -> query($sql); 
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +18,7 @@
     <title>İletişim</title>
     <link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
     <link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/nav_bar.css" />
     <link
       rel="stylesheet"
       href="css/bootstrap-5.1.3-dist/css/bootstrap.min.css"
@@ -18,7 +26,46 @@
     <link rel="stylesheet" href="css/iletişim.css">
   </head>
   <body>
-  <?php include "NavBar.php" ?>
+  <header>
+        <a href="index.php"><img class="logo" src="assets/logo.png" alt="logo"></a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="rezervasyonlarim.php">Rezervasyon</a>
+                    <ul>
+                        <li><a href="rezervasyonlarim.php">Rezervasyonlarım</a></li>
+                        <li><a href="rezerve_olustur.php">Rezervasyon Oluştur</a></li>
+                    </ul>
+                </li>
+                <li><a href="tum_araclar.php">Araçlarımız</a>
+                    <ul class="acilir">
+                        <li><a href="tum_araclar.php">Tüm Araçlar</a></li>
+                        <hr>
+                        <li><a href="ekonomik_sinif.php">Ekonomik Sınıfı Araçlar</a></li>
+                        <li><a href="konfor_sinif.php">Konfor Sınıfı Araçlar</a></li>
+                        <li><a href="premium_sinif.php">Premium Sınıfı Araçlar</a></li>
+                        <li><a href="luks_araclar.php">Lüks Sınıfı Araçlar</a></li>
+                        <li><a href="premium_sinif.php">Prestij Sınıfı Araçlar</a></li>
+                    </ul>
+                </li>
+                <li><a href="iletisim.php">İletişim</a></li>
+            </ul>
+        </nav>
+        <nav>
+        <?php
+                        if($result->num_rows > 0 ){
+                            while ($row=$result->fetch_assoc()){
+            ?>
+            <ul class="nav_links login">
+                <li><a href="kisiselSayfa.php"><?php echo $row["adi"] ." ". $row["soyadi"] ?></a></li>
+                <?php }}?>
+                <?php if($result->num_rows > 0){}else{ ?>
+                <li><a href="giris.html">Giriş Yap</a></li>
+                <li><a href="Kayit_ol.php">Üye Ol</a></li>
+                <?php }?>
+            </ul>
+
+        </nav>
+    </header>
 
     <div class="container">
 

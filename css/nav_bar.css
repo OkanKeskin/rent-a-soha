@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    list-style: none;
 }
 .container{
     height: 100%;
@@ -140,7 +141,7 @@ header{
     align-items: center;
     padding: 30px 10%;
     background-color: white;
-    margin-bottom: 50px;
+    margin: 20px 0 20px 0;
 }
 .logo{
     height: 50px;
@@ -153,6 +154,9 @@ header{
     display: inline-block;
     padding: 0 20px;
 }
+.login{
+    display: inline-block;
+}
 .nav_links li a{
     transition: all 0.7s ease 0s;
 }
@@ -160,6 +164,7 @@ header{
     color: #02b8dd;
     font-size: 18px;
 }
+
 ul li ul{
      visibility: hidden;
      opacity: 0;
@@ -172,6 +177,8 @@ ul li ul{
      line-height: 18px;
      padding: 10px 0;
      border-radius: 10px;
+     z-index: 10000;
+     background: pink;
  }
  ul li:hover > ul , ul li ul:hover{
      visibility: visible;
