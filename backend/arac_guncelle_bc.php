@@ -3,7 +3,7 @@ session_start();
 
 
    
-
+if(isset($_POST)){
          $sn="localhost";
          $un="root";
          $ps="";
@@ -62,21 +62,5 @@ session_start();
         header("Refresh: 2; url=../zadmin/arac-guncelle.php");
      }
      
-     else{
-     echo "adsd";
-        }
-        
-    
- 
-    
      
-    
-   
-   
-   
-   
- 
-
-
-
-   ?>
+    }

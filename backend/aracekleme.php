@@ -53,12 +53,14 @@ else if($kategori == "Prestij Sınıf"){
 $stmt->execute(array($adi, $katId, $fotolink,$kapıSayisi,$airbagSayisi,$bagajHacmi,$frenSistemi,$yakitSistemi,$sanziman));
 
 if($stmt ==TRUE){
-    echo "Ekleme başarılı";
+   include "../bilgilerdogru.html";
+   header("Refresh: 2; url=../zadmin/arac-ekle.php");
+   
 }
 else{
     echo "Ekleme başarılı değil";
 }
 
 
-
+?>
 
