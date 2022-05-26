@@ -102,8 +102,8 @@
             font-size: x-large;
         }
         .guncelle{
-            margin: 40px auto;
-            margin-top:130px;
+            margin: 20px auto;
+            margin-top:50px;
             padding: 25px;
             width: 600px;
             background-color: blue;
@@ -120,17 +120,23 @@
 <body>
     <div class="container">
         <div class="left">
-            <h1>Okan KESKİN</h1>
+        <?php 
+            while ($row=$result->fetch_assoc()){
+                $rolId = $row["rol_id"];
+                
+                ?>
+            <h1><?php echo $row["adi"] . " " .$row["soyadi"] ?></h1>
             <img src="./assets/user.png" alt="user" class="foto">
-            <h2>Kullanıcı</h2>
+            <h2><?php if($rolId == 1){echo "ADMİN";}else{echo "Kullanıcı";}?></h2>
             <h3>En Son giriş tarihi : 11-12-1220</h3>
             <h3>Aktif kiralama : YOK</h3>
+            <?php if($rolId == 1){?> 
+                <a class="cikis" style="background-color: rgb(222, 222, 123);" href="./zadmin/panel.php">Admin Paneline Gir</a>
+            <?php } ?> 
             <a class="cikis" href="./backend/cikisYap.php">Çıkış Yap</a>
         </div>
         <div class="right">
-            <?php 
-            while ($row=$result->fetch_assoc()){
-                ?>
+            
             <h1>Kullanıcı Bilgileri</h1>
             <div class="bilgiler">
                 <div class="denenm" >
@@ -148,6 +154,10 @@
                 <div class="denenm" >
                     <label for="name">Cep Telefonu: </label>
                     <h4><?php echo $row["cep_tel"]?></h4>
+                </div>
+                <div class="denenm" >
+                    <label for="name">Şifre: </label>
+                    <h4>*************</h4>
                 </div>
                 <a class="guncelle" href="./backend/uyeKendiGuncelleme.php">Bilgilerimi Güncelle</a>
             </div>

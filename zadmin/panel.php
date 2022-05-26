@@ -43,8 +43,9 @@
                 <li><a href="arac-guncelle.php">Araç Güncelle/Sil</a></li>
                 <li><a href="uye-islemleri.php">Üye İşlemleri</a></li>
                 <li><a href="iletisim.php">İletişim</a></li>
+                <li><a href="rezervasyonlar.php">Rezervasyonlar</a></li>
             </ul>
-            <a class="cikis" href="../index.html">Çıkış Yap</a>
+            <a class="cikis" href="../index.php">Çıkış Yap</a>
         </div>
         <div class="button" id="side">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">

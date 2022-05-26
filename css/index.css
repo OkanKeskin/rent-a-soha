@@ -104,7 +104,7 @@ nav ul li a:hover{
 .header-bottom{
     margin-top: 20px;
     display: inline;
-}
+}*/
 
 .header-bottom h1{
     overflow: hidden;
@@ -125,7 +125,7 @@ nav ul li a:hover{
     letter-spacing: 0.15rem;
     animation: typing 10s steps(30,end), blink-caret 0.5s step-end infinite;
 }
-*/
+
 li a{
     font-family:sans-serif;
     font-size: 16px;

@@ -51,6 +51,10 @@ if($result->num_rows > 0 ){
                     <label for="validationCustom01" class="form-label">Cep Telefonu</label>
                     <input type="text" class="form-control" value="<?php echo $row["cep_tel"] ?>" name="telefon" required>
                   </div>
+                  <div class="col-md-12">
+                    <label for="validationCustom01" class="form-label">Şifre</label>
+                    <input type="text" class="form-control" name="sifre" required>
+                  </div>
                   
                   <div class="col-md-12">
                     <input class="btn btn-success col-md-12 kayit" id="gonder" type="submit" name="gonder">

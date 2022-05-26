@@ -1,0 +1,19 @@
+.header-bottom h1{
+    overflow: hidden;
+    border-right: 0.15rem solid orange;
+    white-space: nowrap;
+    text-align: center;
+    margin: 10px auto;
+    letter-spacing: 0.15rem;
+    animation: typing 3.5s steps(30,end), blink-caret 0.5s step-end infinite;
+}
+
+.header-bottom h2{
+    overflow: hidden;
+    border-right: 0.15rem solid orange;
+    white-space: nowrap;
+    text-align: center;
+    margin: 10px auto;
+    letter-spacing: 0.15rem;
+    animation: typing 10s steps(30,end), blink-caret 0.5s step-end infinite;
+}

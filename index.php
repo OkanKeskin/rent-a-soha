@@ -16,6 +16,7 @@
     <title>Ana Sayfa</title>
     <link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
     <link rel="stylesheet" href="css/nav_bar.css" />
+    <link rel="stylesheet" href="css/indexAnimation.css" />
     <link
       rel="stylesheet"
       href="css/bootstrap-5.1.3-dist/css/bootstrap.min.css"
