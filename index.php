@@ -26,7 +26,7 @@
       $(function(){
         $("#rezerv").click(function(){
           var link =$('#select').find(":selected").val();
-          link = link + ".html";
+          link = link + ".php";
           console.log(link)
           window.open(link);
         })
